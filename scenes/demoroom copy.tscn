@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://bb637sqphoxl8"]
+[gd_scene load_steps=51 format=3 uid="uid://bb637sqphoxl8"]
 
 [ext_resource type="Texture2D" uid="uid://bfchoi5fbgeug" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="1_lqwub"]
 [ext_resource type="Texture2D" uid="uid://c43o8pegnxo01" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_acr6s"]
@@ -22,6 +22,12 @@
 [ext_resource type="Texture2D" uid="uid://vghmi77578s5" path="res://assets/interior full/furniture/storage.png" id="15_feu6y"]
 [ext_resource type="Texture2D" uid="uid://d37pdbf4ajukm" path="res://assets/interior full/furniture/tables.png" id="16_t1k0d"]
 [ext_resource type="Texture2D" uid="uid://bej3po65c3gse" path="res://assets/interior full/furniture/wallshelves.png" id="17_pcp6a"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="23_t26x1"]
+[ext_resource type="Texture2D" uid="uid://dqcdv6vidw7xd" path="res://assets/plant pot/aseprite-plant-sapling_og.png" id="24_84hay"]
+[ext_resource type="Texture2D" uid="uid://hqn54i3ljvqg" path="res://assets/plant pot/aseprite-plant-grown.png" id="25_8semj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jq5m"]
+size = Vector2(29, 32)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bqpl"]
 texture = ExtResource("1_lqwub")
@@ -26482,6 +26488,21 @@ sources/27 = SubResource("TileSetAtlasSource_jxvrd")
 sources/28 = SubResource("TileSetAtlasSource_dotlr")
 
 [node name="demoroom" type="Node2D"]
+
+[node name="interactable" parent="." instance=ExtResource("23_t26x1")]
+position = Vector2(26, 189)
+first_texture = ExtResource("24_84hay")
+second_texture = ExtResource("25_8semj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="interactable"]
+z_index = 5
+position = Vector2(0, -7)
+texture = ExtResource("24_84hay")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="interactable"]
+z_index = 10
+position = Vector2(0.5, -9)
+shape = SubResource("RectangleShape2D_0jq5m")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(146.788, 82.5685)

@@ -1,8 +1,39 @@
+
+[gd_scene load_steps=48 format=3 uid="uid://bb637sqphoxl8"]
+
+[ext_resource type="Texture2D" uid="uid://bfchoi5fbgeug" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="1_lqwub"]
+[ext_resource type="PackedScene" uid="uid://cwsdkvb7cmfrc" path="res://scenes/player.tscn" id="1_tb52t"]
+[ext_resource type="Texture2D" uid="uid://c43o8pegnxo01" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_acr6s"]
+[ext_resource type="Texture2D" uid="uid://d11og8pi26sy4" path="res://assets/interior full/16x16/couches16x16.png" id="3_5h242"]
+[ext_resource type="Texture2D" uid="uid://bebntqcsmx2xr" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState1.png" id="3_sfs2f"]
+[ext_resource type="Texture2D" uid="uid://bw56gcf1gv31a" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FurnitureState2.png" id="4_t2m86"]
+[ext_resource type="Texture2D" uid="uid://c2iacnhy5rqky" path="res://assets/interior full/16x16/couchtables16x16.png" id="5_a854s"]
+[ext_resource type="Texture2D" uid="uid://dg7x7damnkgtl" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_SmallItems.png" id="5_tdixr"]
+[ext_resource type="Texture2D" uid="uid://bd3biqq57qoow" path="res://assets/interior full/basics/doors.png" id="6_ey3dv"]
+[ext_resource type="Texture2D" uid="uid://d26va5a3kuiy4" path="res://assets/interior free/interior free.png" id="6_s7hyu"]
+[ext_resource type="Texture2D" uid="uid://dt6bnkgnqvjf8" path="res://assets/interior full/basics/fireplaces.png" id="7_2dylj"]
+[ext_resource type="Texture2D" uid="uid://dngvd4fecfs6a" path="res://assets/interior full/basics/curtains.png" id="7_3sj0f"]
+[ext_resource type="Texture2D" uid="uid://cv7ao7mukp4cl" path="res://assets/interior full/basics/stairs.png" id="8_6js7k"]
+[ext_resource type="Texture2D" uid="uid://stiket5srj7u" path="res://assets/interior full/basics/wallpapers.png" id="9_dkstt"]
+[ext_resource type="Texture2D" uid="uid://2hajydekk06m" path="res://assets/interior full/furniture/decorations.png" id="11_3erh8"]
+[ext_resource type="Texture2D" uid="uid://d3tuiuc438yn2" path="res://assets/interior full/furniture/kidsroom.png" id="12_evsu7"]
+[ext_resource type="Texture2D" uid="uid://cm3pnadf4m8kr" path="res://assets/interior full/16x16/bathroom16x16.png" id="12_g0uj2"]
+[ext_resource type="Texture2D" uid="uid://b43cjvx2icnh7" path="res://assets/interior full/furniture/kitchens_assembled.png" id="13_algnm"]
+[ext_resource type="Texture2D" uid="uid://y6scbmmnn4dq" path="res://assets/interior full/furniture/kitchen_tiles.png" id="14_s4f38"]
+[ext_resource type="Texture2D" uid="uid://dxnb1o7hl7b20" path="res://assets/interior full/16x16/beds16x16.png" id="14_ygkvt"]
+[ext_resource type="Texture2D" uid="uid://vghmi77578s5" path="res://assets/interior full/furniture/storage.png" id="15_feu6y"]
+[ext_resource type="Texture2D" uid="uid://d37pdbf4ajukm" path="res://assets/interior full/furniture/tables.png" id="16_t1k0d"]
+[ext_resource type="Texture2D" uid="uid://bej3po65c3gse" path="res://assets/interior full/furniture/wallshelves.png" id="17_pcp6a"]
+
 [gd_scene load_steps=2 format=3 uid="uid://bb637sqphoxl8"]
 
 [ext_resource type="TileSet" path="res://scenes/tileset.tres" id="1_chfs2"]
 
+
 [node name="Kitchen" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_tb52t")]
+position = Vector2(43, 124)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(146.788, 82.5685)

@@ -8,6 +8,7 @@ size = Vector2(129, 124)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
+position = Vector2(150, 100)
 scale = Vector2(0.15, 0.15)
 collision_mask = 6
 script = ExtResource("1_glrnl")

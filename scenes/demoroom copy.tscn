@@ -1,12 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bb637sqphoxl8"]
+[gd_scene load_steps=2 format=3 uid="uid://bb637sqphoxl8"]
 
-[ext_resource type="PackedScene" uid="uid://cwsdkvb7cmfrc" path="res://scenes/player.tscn" id="1_tb52t"]
 [ext_resource type="TileSet" path="res://scenes/tileset.tres" id="2_f7twn"]
 
 [node name="demoroom" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_tb52t")]
-position = Vector2(43, 124)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(146.788, 82.5685)

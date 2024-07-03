@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bfwt6s3wfs6qt"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_bxwta"]
+[ext_resource type="TileSet" path="res://scenes/tileset.tres" id="1_bxwta"]
 
 [node name="livingroom" type="Node2D"]
 

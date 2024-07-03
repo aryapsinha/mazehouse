@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bb637sqphoxl8"]
 
 [ext_resource type="PackedScene" uid="uid://cwsdkvb7cmfrc" path="res://scenes/player.tscn" id="1_tb52t"]
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="2_f7twn"]
+[ext_resource type="TileSet" path="res://scenes/tileset.tres" id="2_f7twn"]
 
 [node name="demoroom" type="Node2D"]
 

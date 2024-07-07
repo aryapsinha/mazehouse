@@ -3,24 +3,27 @@ extends Area2D
 
 @export var first_texture = load("ex"); 
 @export var second_texture = load("TEXTURE PATH HERE");
-
+var interactable = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$Sprite2D.set_texture(first_texture)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$Sprite2D.set_texture(first_texture)
-	
+	#
+	if interactable:
+		if Input.is_action_pressed("interact"):
+			$Sprite2D.set_texture(second_texture)
 
 
 func _on_body_entered(body: Node2D) -> void:
 	Player.message.show()
-	if Input.is_action_pressed("press"):
-		$Sprite2D.set_texture(second_texture) # Replace with function body.
+	interactable = true
+	 # Replace with function body.
 		
 
 func _on_Sprite_texture_changed():
@@ -30,4 +33,5 @@ func _on_Sprite_texture_changed():
 
 
 func _on_body_exited(body: Node2D) -> void:
-	Player.message.hide() # Replace with function body.
+	Player.message.hide() 
+	interactable = false# Replace with function body.

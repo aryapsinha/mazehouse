@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://nspkk5b3bjoj"]
+[gd_scene load_steps=4 format=3 uid="uid://nspkk5b3bjoj"]
 
 [ext_resource type="Script" path="res://scripts/interactable.gd" id="1_74asv"]
+[ext_resource type="Texture2D" uid="uid://b4mdvsbig4bey" path="res://assets/Ghostpixxells_pixelfood/03_dish_pile.png" id="2_bycwo"]
 [ext_resource type="Texture2D" uid="uid://ckti4dpqtmwe1" path="res://assets/Ghostpixxells_pixelfood/01_dish.png" id="2_rgfpb"]
 
 [node name="interactable" type="Area2D"]
 script = ExtResource("1_74asv")
+first_texture = ExtResource("2_rgfpb")
+second_texture = ExtResource("2_bycwo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_rgfpb")

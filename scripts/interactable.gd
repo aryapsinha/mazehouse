@@ -3,6 +3,7 @@ extends Area2D
 
 @export var first_texture = load("ex"); 
 @export var second_texture = load("TEXTURE PATH HERE");
+@export var glow_texture = load("exx");
 var interactable = false
 
 
@@ -22,6 +23,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	Player.message.show()
+	#insert glow texture here 
 	interactable = true
 	 # Replace with function body.
 		

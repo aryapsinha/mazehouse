@@ -25,14 +25,15 @@ z_index = 10
 position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_y0vnf")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="IntMessage" type="ColorRect" parent="."]
+visible = false
 offset_left = -547.0
 offset_top = 227.0
 offset_right = -247.0
 offset_bottom = 308.0
 color = Color(0.180097, 0.0882315, 0.029628, 1)
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Label" type="Label" parent="IntMessage"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

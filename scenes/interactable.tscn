@@ -12,6 +12,5 @@ second_texture = ExtResource("2_bycwo")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_rgfpb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

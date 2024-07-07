@@ -18,10 +18,16 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
+	Player.message.show()
 	if Input.is_action_pressed("press"):
 		$Sprite2D.set_texture(second_texture) # Replace with function body.
+		
 
 func _on_Sprite_texture_changed():
 	if $Sprite2D.texture != get_parent().first_texture:
 		await get_tree().create_timer(3).timeout
 		$Sprite2D.set_texture(first_texture)
+
+
+func _on_body_exited(body: Node2D) -> void:
+	Player.message.hide() # Replace with function body.

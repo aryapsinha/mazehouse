@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_bxwta"]
 
 [node name="livingroom" type="Node2D"]
+position = Vector2(3, 20)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, 64)

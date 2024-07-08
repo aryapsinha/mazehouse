@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bmwleib7n5igm"]
+
+[node name="IndoorGarden" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2

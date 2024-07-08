@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch8ycvj6aictp"]
+
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_ugwur"]
+
+[node name="start-room" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_ugwur")
+format = 2
+layer_0/name = "Background"
+layer_1/name = "Base Furniture"
+layer_2/name = "Base Deco"
+layer_3/name = "Deco 1"
+layer_4/name = "Deco 2"

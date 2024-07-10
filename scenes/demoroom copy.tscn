@@ -29,9 +29,9 @@ position = Vector2(98, 71)
 scale = Vector2(1.08999, 1.01463)
 first_texture = ExtResource("3_21sh8")
 second_texture = ExtResource("4_0l2lt")
+toggleable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
 visible = false
 position = Vector2(-6.99954e-06, -1.3113e-06)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_npwt6")

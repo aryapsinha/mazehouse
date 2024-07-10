@@ -1,19 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://nspkk5b3bjoj"]
+[gd_scene load_steps=4 format=3 uid="uid://nspkk5b3bjoj"]
 
 [ext_resource type="Script" path="res://scripts/interactable.gd" id="1_74asv"]
 [ext_resource type="Texture2D" uid="uid://b4mdvsbig4bey" path="res://assets/Ghostpixxells_pixelfood/03_dish_pile.png" id="2_bycwo"]
 [ext_resource type="Texture2D" uid="uid://ckti4dpqtmwe1" path="res://assets/Ghostpixxells_pixelfood/01_dish.png" id="2_rgfpb"]
-[ext_resource type="Texture2D" uid="uid://dpadwpmbxnqc2" path="res://assets/interactables/aseprite-oven.png" id="4_3s2yk"]
 
 [node name="interactable" type="Area2D"]
 script = ExtResource("1_74asv")
 first_texture = ExtResource("2_rgfpb")
 second_texture = ExtResource("2_bycwo")
+toggleable = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.90735e-06, 4.76837e-07)
 scale = Vector2(1.02517, 0.978125)
-texture = ExtResource("4_3s2yk")
+texture = ExtResource("2_rgfpb")
 region_rect = Rect2(12, 5, 24, 27)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

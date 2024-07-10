@@ -24,9 +24,6 @@ layer_3/name = "Deco 2"
 layer_3/z_index = 11
 layer_3/tile_data = PackedInt32Array(-262143, 262148, 1, 393207, 2, 10, 327685, 2, 10, 458743, 2, 11, 393221, 2, 11, -131070, 131076, 65543)
 
-[node name="interactable2" parent="." instance=ExtResource("2_evybg")]
-position = Vector2(-20, -8)
-
 [node name="interactable" parent="." instance=ExtResource("2_evybg")]
 position = Vector2(98, 71)
 scale = Vector2(1.08999, 1.01463)

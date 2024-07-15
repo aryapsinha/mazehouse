@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=59 format=3 uid="uid://dhfro7c7op6u0"]
+[gd_resource type="TileSet" load_steps=60 format=3 uid="uid://dhfro7c7op6u0"]
 
 [ext_resource type="Texture2D" uid="uid://bfchoi5fbgeug" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="1_gbq34"]
 [ext_resource type="Texture2D" uid="uid://c43o8pegnxo01" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_lvunp"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dxnb1o7hl7b20" path="res://assets/interior full/16x16/beds16x16.png" id="22_xefkx"]
 [ext_resource type="Texture2D" uid="uid://c1dyl36b3q6dg" path="res://assets/beds-wider/cozyint-beds-wider.png" id="23_ep2rh"]
 [ext_resource type="Texture2D" uid="uid://cd4bgkbyy77sw" path="res://assets/cozyint-bathtub-bigger.png" id="25_aq5ha"]
+[ext_resource type="Texture2D" uid="uid://dvb43jrp6el3n" path="res://assets/cozyint-basin-bigger-back.png" id="26_0003d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bqpl"]
 texture = ExtResource("1_gbq34")
@@ -1160,9 +1161,6 @@ texture = ExtResource("3_wpts8")
 37:29/0 = 0
 38:29/0 = 0
 39:29/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ers1"]
-texture = ExtResource("21_uq1ql")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56jb8"]
 texture = ExtResource("4_1c2dh")
@@ -21850,8 +21848,14 @@ texture = ExtResource("17_n3whc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
+3:0/next_alternative_id = 2
 3:0/0 = 0
+3:0/1 = 1
+3:0/1/texture_origin = Vector2i(-7, 0)
+4:0/next_alternative_id = 2
 4:0/0 = 0
+4:0/1 = 1
+4:0/1/texture_origin = Vector2i(-7, 0)
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -23496,6 +23500,13 @@ texture = ExtResource("25_aq5ha")
 7:7/0 = 0
 8:7/0 = 0
 9:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_no1ac"]
+texture = ExtResource("26_0003d")
+margins = Vector2i(1, 2)
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 5)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ubpv6"]
 texture = ExtResource("19_3yf8p")
@@ -28122,5 +28133,5 @@ sources/19 = SubResource("TileSetAtlasSource_ayg03")
 sources/20 = SubResource("TileSetAtlasSource_p6qus")
 sources/24 = SubResource("TileSetAtlasSource_hum7s")
 sources/30 = SubResource("TileSetAtlasSource_alnot")
-sources/11 = SubResource("TileSetAtlasSource_2ers1")
 sources/31 = SubResource("TileSetAtlasSource_xjc0d")
+sources/37 = SubResource("TileSetAtlasSource_no1ac")

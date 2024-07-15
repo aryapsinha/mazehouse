@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=56 format=3 uid="uid://dhfro7c7op6u0"]
+[gd_resource type="TileSet" load_steps=59 format=3 uid="uid://dhfro7c7op6u0"]
 
 [ext_resource type="Texture2D" uid="uid://bfchoi5fbgeug" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_DoorsAndWindows.png" id="1_gbq34"]
 [ext_resource type="Texture2D" uid="uid://c43o8pegnxo01" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_lvunp"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://cm3pnadf4m8kr" path="res://assets/interior full/16x16/bathroom16x16.png" id="21_uq1ql"]
 [ext_resource type="Texture2D" uid="uid://dxnb1o7hl7b20" path="res://assets/interior full/16x16/beds16x16.png" id="22_xefkx"]
 [ext_resource type="Texture2D" uid="uid://c1dyl36b3q6dg" path="res://assets/beds-wider/cozyint-beds-wider.png" id="23_ep2rh"]
+[ext_resource type="Texture2D" uid="uid://cd4bgkbyy77sw" path="res://assets/cozyint-bathtub-bigger.png" id="25_aq5ha"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bqpl"]
 texture = ExtResource("1_gbq34")
@@ -1159,6 +1160,9 @@ texture = ExtResource("3_wpts8")
 37:29/0 = 0
 38:29/0 = 0
 39:29/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ers1"]
+texture = ExtResource("21_uq1ql")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56jb8"]
 texture = ExtResource("4_1c2dh")
@@ -23470,6 +23474,29 @@ texture = ExtResource("23_ep2rh")
 46:23/0 = 0
 47:23/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xjc0d"]
+texture = ExtResource("25_aq5ha")
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ubpv6"]
 texture = ExtResource("19_3yf8p")
 0:0/0 = 0
@@ -28095,3 +28122,5 @@ sources/19 = SubResource("TileSetAtlasSource_ayg03")
 sources/20 = SubResource("TileSetAtlasSource_p6qus")
 sources/24 = SubResource("TileSetAtlasSource_hum7s")
 sources/30 = SubResource("TileSetAtlasSource_alnot")
+sources/11 = SubResource("TileSetAtlasSource_2ers1")
+sources/31 = SubResource("TileSetAtlasSource_xjc0d")

@@ -1,15 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwsdkvb7cmfrc"]
 
-[ext_resource type="Texture2D" uid="uid://cxvmavdx8m721" path="res://assets/icon.svg" id="1_cnp4t"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_glrnl"]
+[ext_resource type="Texture2D" uid="uid://dv1ywtw3rvlfh" path="res://assets/player/hci-player-oppressedghost-still.png" id="2_ixoq1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0vnf"]
-size = Vector2(129, 124)
+size = Vector2(8.66667, 10.6667)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
 position = Vector2(150, 100)
-scale = Vector2(0.15, 0.15)
+scale = Vector2(1.5, 1.5)
 collision_mask = 6
 script = ExtResource("1_glrnl")
 
@@ -18,35 +18,38 @@ z_index = 30
 zoom = Vector2(7, 7)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_cnp4t")
+texture = ExtResource("2_ixoq1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 10
-position = Vector2(0.5, -1)
+position = Vector2(0, 5.33333)
 shape = SubResource("RectangleShape2D_y0vnf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(5.33334, 7.33333, 4, 7.33333, 4, 8, -4, 8, -4, 7.33333, -5.33333, 7.33333, -5.33333, 3.33333, -6, 3.33333, -6, 2.66666, -7.33333, 2.66666, -7.33333, -1.33334, -6.66666, -1.33334, -6.66666, -2.66667, -5.33333, -2.66667, -5.33333, -7.33334, -4.66666, -7.33334, -4.66666, -8, 4, -8, 4, -7.33334, 5.33334, -7.33334, 5.33334, -2.66667, 6.66667, -2.66667, 6.66667, -1.33334, 7.33334, -1.33334, 7.33334, 2.66666, 6.66667, 2.66666, 6.66667, 3.33333, 5.33334, 3.33333)
 
 [node name="IntMessage" type="ColorRect" parent="."]
 visible = false
-offset_left = -547.0
-offset_top = 227.0
-offset_right = -247.0
-offset_bottom = 308.0
+offset_left = -55.3333
+offset_top = 20.0
+offset_right = -13.3333
+offset_bottom = 31.0
 color = Color(0.180097, 0.0882315, 0.029628, 1)
 
 [node name="Label" type="Label" parent="IntMessage"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = -1
+anchor_left = 0.502
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.502
 anchor_bottom = 0.5
-offset_left = -144.5
-offset_top = -22.5
-offset_right = 144.5
-offset_bottom = 22.5
+offset_left = -17.7507
+offset_top = -3.5
+offset_right = 124.249
+offset_bottom = 19.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 32
+scale = Vector2(0.25, 0.25)
 text = "Press X to Interact"
 horizontal_alignment = 1
 vertical_alignment = 1

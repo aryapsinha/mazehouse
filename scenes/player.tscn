@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwsdkvb7cmfrc"]
+[gd_scene load_steps=3 format=3 uid="uid://cwsdkvb7cmfrc"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_glrnl"]
 [ext_resource type="Texture2D" uid="uid://dv1ywtw3rvlfh" path="res://assets/player/hci-player-oppressedghost-still.png" id="2_ixoq1"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0vnf"]
-size = Vector2(8.66667, 10.6667)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
@@ -19,11 +16,6 @@ zoom = Vector2(7, 7)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_ixoq1")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-z_index = 10
-position = Vector2(0, 5.33333)
-shape = SubResource("RectangleShape2D_y0vnf")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(5.33334, 7.33333, 4, 7.33333, 4, 8, -4, 8, -4, 7.33333, -5.33333, 7.33333, -5.33333, 3.33333, -6, 3.33333, -6, 2.66666, -7.33333, 2.66666, -7.33333, -1.33334, -6.66666, -1.33334, -6.66666, -2.66667, -5.33333, -2.66667, -5.33333, -7.33334, -4.66666, -7.33334, -4.66666, -8, 4, -8, 4, -7.33334, 5.33334, -7.33334, 5.33334, -2.66667, 6.66667, -2.66667, 6.66667, -1.33334, 7.33334, -1.33334, 7.33334, 2.66666, 6.66667, 2.66666, 6.66667, 3.33333, 5.33334, 3.33333)

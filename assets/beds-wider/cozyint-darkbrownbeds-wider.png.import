@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwajnba548o4i"
-path="res://.godot/imported/global.png-9cfa1ee9ab934a1afae717c9d6eb0def.ctex"
+uid="uid://clctag60v1mgm"
+path="res://.godot/imported/cozyint-darkbrownbeds-wider.png-2d2c1203592708871259e6fa6b5894ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/nature free/global.png"
-dest_files=["res://.godot/imported/global.png-9cfa1ee9ab934a1afae717c9d6eb0def.ctex"]
+source_file="res://assets/beds-wider/cozyint-darkbrownbeds-wider.png"
+dest_files=["res://.godot/imported/cozyint-darkbrownbeds-wider.png-2d2c1203592708871259e6fa6b5894ea.ctex"]
 
 [params]
 

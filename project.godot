@@ -22,7 +22,6 @@ Player="*res://scenes/player.tscn"
 [display]
 
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 
 [input]
 

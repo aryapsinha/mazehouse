@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d1d4ra1rn37ei"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_wavec"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_wavec"]
 
 [node name="laundryroom" type="Node2D"]
 

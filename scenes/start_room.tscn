@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ch8ycvj6aictp"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_ugwur"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_ugwur"]
 
 [node name="start-room" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [930.673, 680.0]

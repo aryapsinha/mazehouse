@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bjx2fc6chu11s"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_8r6d1"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_8r6d1"]
 
 [node name="Nursery_ChildRoom" type="Node2D"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgy8b56suhoix"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_pir22"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_pir22"]
 
 [node name="studyroom" type="Node2D"]
 

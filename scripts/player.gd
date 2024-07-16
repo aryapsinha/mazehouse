@@ -1,5 +1,6 @@
 extends CharacterBody2D
-
+var normText = preload("res://assets/player/hci-player-oppressedghost-still.png")
+var intText = preload("res://assets/player/hci-player-oppressedghost-interact.png")
 @onready var message = $IntMessage
 const SPEED = 100.0
 const JUMP_VELOCITY = -400.0
@@ -12,3 +13,9 @@ func _physics_process(delta: float) -> void:
 
 
 	move_and_slide()
+func interact():
+	$Sprite2D.set_texture(intText)
+	
+func normal():
+	$Sprite2D.set_texture(normText)
+	

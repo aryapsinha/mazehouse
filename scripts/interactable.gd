@@ -1,6 +1,7 @@
 @tool
 extends Area2D
-
+signal interactSprite
+signal normalSprite
 @export var first_texture = load("ex"); 
 @export var second_texture = load("TEXTURE PATH HERE");
 @export var glow_texture = load("exx");
@@ -12,15 +13,21 @@ var interactable = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Sprite2D.set_texture(first_texture)
-	pass # Replace with function body.
+	#Player.interactSprite.connect(interact)
+	 # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if interactable:
+		
 		if not toggleable and Input.is_action_pressed("interact"):
 			$Sprite2D.set_texture(second_texture)
+			Player.interact()
+			#interactSprite.emit()
 		if toggleable and Input.is_action_pressed("interact"):
+			#interactSprite.emit()
+			Player.interact()
 			if isFirst:
 				$Sprite2D.set_texture(second_texture)
 				print("togglefirst")
@@ -32,7 +39,13 @@ func _process(delta: float) -> void:
 				print("togglesecond")
 				await get_tree().create_timer(0.2).timeout
 				isFirst = true
-				
+		if not Input.is_action_pressed("interact"):
+			Player.normal()
+	
+	
+		#normalSprite.emit()
+		
+					
 
 
 func _on_body_entered(body: Node2D) -> void:

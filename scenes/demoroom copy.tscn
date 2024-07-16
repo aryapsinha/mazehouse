@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bb637sqphoxl8"]
+[gd_scene load_steps=18 format=3 uid="uid://bb637sqphoxl8"]
 
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="2_evybg"]
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="2_f7twn"]
@@ -8,12 +8,21 @@
 [ext_resource type="Texture2D" uid="uid://cebi1lykwyw5a" path="res://assets/interactables/kitchen-sink-TD/sinkbetter.png" id="5_f70fq"]
 [ext_resource type="Texture2D" uid="uid://7fba50x4fty1" path="res://assets/interactables/kitchen-sink-TD/sinkonbetter.png" id="6_0nvw0"]
 [ext_resource type="Texture2D" uid="uid://djijos71tm1aw" path="res://assets/interactables/fridge-TD/fridge-TD-open.png" id="6_xyyap"]
+[ext_resource type="Texture2D" uid="uid://d0kypvppinexu" path="res://assets/interactables/fireplace-TD/fireplace-TD.png" id="7_y64d3"]
+[ext_resource type="Texture2D" uid="uid://ca4rfnve31cwh" path="res://assets/interactables/fireplace-TD/fireplace-TD-on.png" id="8_opbeg"]
+[ext_resource type="Texture2D" uid="uid://vrw23u41vv5q" path="res://assets/interactables/cozyint-toaster-still-og-EDITED.png" id="9_8npm7"]
+[ext_resource type="Texture2D" uid="uid://bovtcbpv8oofa" path="res://assets/interactables/cozyint-toaster-pops.png" id="10_d6jcq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npwt6"]
 size = Vector2(29.358, 48.2935)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgssl"]
 size = Vector2(24.02, 18.56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7hsj"]
+size = Vector2(23, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1is7r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lcg8j"]
 size = Vector2(27, 61.5)
@@ -55,6 +64,26 @@ toggleable = true
 position = Vector2(1.51044, -10.6667)
 scale = Vector2(1.04167, 1.04167)
 shape = SubResource("RectangleShape2D_lgssl")
+
+[node name="fireplace" parent="." instance=ExtResource("2_evybg")]
+position = Vector2(67, 69)
+first_texture = ExtResource("7_y64d3")
+second_texture = ExtResource("8_opbeg")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fireplace"]
+position = Vector2(-0.5, 8)
+shape = SubResource("RectangleShape2D_n7hsj")
+
+[node name="toaster" parent="." instance=ExtResource("2_evybg")]
+texture_filter = 1
+position = Vector2(214, 58)
+first_texture = ExtResource("9_8npm7")
+second_texture = ExtResource("10_d6jcq")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toaster"]
+shape = SubResource("RectangleShape2D_1is7r")
 
 [node name="fridge" parent="." instance=ExtResource("2_evybg")]
 position = Vector2(34, 64)

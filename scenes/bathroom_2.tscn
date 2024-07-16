@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bq5xeslolripi"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_sjpqm"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_sjpqm"]
 
 [node name="bathroom2" type="Node2D"]
 

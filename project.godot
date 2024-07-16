@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Player="*res://scenes/player.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 interact={

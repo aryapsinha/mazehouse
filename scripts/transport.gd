@@ -1,6 +1,6 @@
 extends Area2D
 @export var sceneto = load("path")
-
+@export var spawnin = Vector2(0,0)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -13,4 +13,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	await get_tree().create_timer(0.5).timeout # Replace with function body.
+	Player.position = spawnin
+	print(Player.position)
+	
 	get_tree().change_scene_to_file(sceneto.get_path())
+	

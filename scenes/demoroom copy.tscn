@@ -100,3 +100,4 @@ shape = SubResource("RectangleShape2D_lcg8j")
 [node name="transport" parent="." instance=ExtResource("13_5nsbu")]
 position = Vector2(-9, 127)
 sceneto = ExtResource("14_nqnhm")
+spawnin = Vector2(32, 87)

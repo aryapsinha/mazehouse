@@ -5,6 +5,7 @@
 [node name="storageroom" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(4, 20)
 tile_set = ExtResource("1_wj8ij")
 format = 2
 layer_0/name = "Background"

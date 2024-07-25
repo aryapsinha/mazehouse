@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dk0qlla2jm6ys"]
+[gd_scene load_steps=3 format=3 uid="uid://dk0qlla2jm6ys"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_rpht7"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_rpht7"]
+[ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_de6ru"]
 
 [node name="Hallway2" type="Node2D"]
 
@@ -15,3 +16,36 @@ layer_2/name = "Base Deco"
 layer_2/tile_data = PackedInt32Array(458768, 65539, 10, 524304, 65539, 11, 458769, 131075, 10, 524305, 131075, 11, 458770, 196611, 10, 524306, 196611, 11, 458771, 262147, 10, 524307, 262147, 11, 524303, 786435, 1, 262144, 196610, 2, 327680, 196610, 3, 262145, 262146, 2, 327681, 262146, 3, 262154, 327682, 2, 327690, 327682, 3, 262155, 393218, 2, 327691, 393218, 3, 262167, 327682, 268435460, 327703, 327682, 268435460, 393239, 327682, 268435461, 458775, 327682, 268435462, 262148, 196610, 2, 327684, 196610, 3, 262149, 262146, 2, 327685, 262146, 3, 524297, 720899, 131082, 327700, 65557, 268500995, 262164, 65557, 268500994, 131074, 4915214, 36, 131079, 4915214, 36, 131089, 4915214, 36, 524299, 786435, 1, 589847, 196626, 2, 589844, 196626, 2, 589838, 196626, 2, 589835, 196626, 2, 589831, 196626, 2, 589828, 196626, 2, 589832, 196626, 2, 589833, 196626, 2, 589834, 196626, 2, 589823, 131090, 1, 393215, 131090, 1)
 layer_3/name = "Deco1"
 layer_3/tile_data = PackedInt32Array(458775, 2, 10, 524311, 2, 11, 458752, 2, 10, 524288, 2, 11, 196623, 393218, 7, 262159, 393218, 8, 327695, 393218, 9, 458767, 327701, 65543, 393231, 327701, 65542, 262144, 458773, 196621, 262154, 1114133, 131081, 262148, 196629, 65549, 196624, 131074, 4, 262160, 131074, 5, 327696, 131074, 6, 196625, 196610, 4, 262161, 196610, 5, 327697, 196610, 6, 196626, 262146, 4, 262162, 262146, 5, 327698, 262146, 6, 458763, 262148, 131078, 393215, 196626, 0, 393214, 131090, 0, 589823, 196626, 2, 589822, 131090, 2, 589828, 131090, 1, 589835, 131090, 1, 589844, 131090, 1, 589831, 262162, 1, 589838, 262162, 1, 589847, 262162, 1)
+
+[node name="transport" parent="." instance=ExtResource("2_de6ru")]
+position = Vector2(-19, 110)
+dest_scene = "livingroom"
+spawnin = Vector2(210, 198)
+
+[node name="transport6" parent="." instance=ExtResource("2_de6ru")]
+position = Vector2(352, 62)
+dest_scene = "cutesy"
+spawnin = Vector2(282, 158)
+
+[node name="transport5" parent="." instance=ExtResource("2_de6ru")]
+position = Vector2(207, 63)
+dest_scene = "library"
+spawnin = Vector2(176, 289)
+
+[node name="transport2" parent="." instance=ExtResource("2_de6ru")]
+position = Vector2(97, 165)
+rotation = 1.5708
+dest_scene = "gamesroom"
+spawnin = Vector2(229, 144)
+
+[node name="transport3" parent="." instance=ExtResource("2_de6ru")]
+position = Vector2(208, 162)
+rotation = 1.5708
+dest_scene = "gamesroom"
+spawnin = Vector2(216, 240)
+
+[node name="transport4" parent="." instance=ExtResource("2_de6ru")]
+position = Vector2(351, 160)
+rotation = 1.5708
+dest_scene = "bathroom2"
+spawnin = Vector2(13, 85)

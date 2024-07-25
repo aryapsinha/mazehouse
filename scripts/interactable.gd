@@ -9,10 +9,15 @@ var isFirst = true;
 @export var toggleable = true; 
 var interactable = false
 
+@onready var app = $AudioStreamPlayer
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Sprite2D.set_texture(first_texture)
+	#app.play()
+	print("played")
 	#Player.interactSprite.connect(interact)
 	 # Replace with function body.
 
@@ -20,6 +25,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if interactable:
+		
 		#Player.message.show()
 		if not toggleable and Input.is_action_pressed("interact"):
 			$Sprite2D.set_texture(second_texture)

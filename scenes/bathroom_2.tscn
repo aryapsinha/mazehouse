@@ -20,5 +20,5 @@ layer_3/tile_data = PackedInt32Array(65542, 6, 65541)
 
 [node name="transport" parent="." instance=ExtResource("2_wosck")]
 position = Vector2(-13, 85)
-dest_scene = "cutesy"
-spawnin = Vector2(264, 127)
+dest_scene = "hallway2"
+spawnin = Vector2(350, 137)

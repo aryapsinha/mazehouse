@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1hctop1yyyh1"]
+[gd_scene load_steps=3 format=3 uid="uid://b1hctop1yyyh1"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_dfpvj"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_dfpvj"]
+[ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_j8kdr"]
 
 [node name="guestbedroom" type="Node2D"]
 
@@ -17,3 +18,8 @@ layer_3/name = "Deco 1"
 layer_3/tile_data = PackedInt32Array(655371, 3407880, 131095, 720907, 3407880, 131096, 655372, 3407880, 65559, 720908, 3407880, 65560, 655373, 3473416, 65559, 720909, 3473416, 65560, 262157, 720899, 65536, 458765, 4, 3, 393222, 1835033, 65550, 262154, 196611, 65539, 262155, 262147, 65539, 196618, 196611, 65538, 196619, 262147, 65538, 655361, 2228245, 65540, 655362, 2228245, 65538, 720897, 2228245, 65543, 720898, 2228245, 65541, 655363, 1572885, 268435467, 655364, 1507349, 268435467, 720900, 1507349, 268435468, 262142, 327701, 65543, 196606, 327701, 65542, 327683, 720899, 7, 393219, 720899, 8, 458755, 720899, 9, 327684, 786435, 7, 393220, 786435, 8, 458756, 786435, 9, 327689, 720899, 268435463, 327688, 786435, 268435463, 393225, 720899, 268435464, 393224, 786435, 268435464, 458761, 720899, 268435465, 458760, 786435, 268435465, 65537, 720917, 24, 196617, 1376277, 65545, 262147, 2, 11, 196611, 2, 10)
 layer_4/name = "Deco 2"
 layer_4/tile_data = PackedInt32Array(131082, 196612, 65539, 786433, 720899, 65546, 786445, 1376277, 8, 720909, 1376277, 7, 131085, 1114133, 65545)
+
+[node name="transport" parent="." instance=ExtResource("2_j8kdr")]
+position = Vector2(-49, 111)
+dest_scene = "startroom"
+spawnin = Vector2(241, 111)

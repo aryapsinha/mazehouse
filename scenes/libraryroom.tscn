@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://6ds2fng3owjs"]
+
+[gd_scene load_steps=3 format=3 uid="uid://bnguj0vql684a"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_rh8b3"]
+[ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_pdjj7"]
 
 [node name="libraryroom" type="Node2D"]
 
@@ -16,3 +18,9 @@ layer_2/tile_data = PackedInt32Array(786436, 327682, 4, 851972, 327682, 5, 91750
 layer_3/name = "Deco 1"
 layer_3/tile_data = PackedInt32Array(851972, 327682, 4, 917508, 327682, 5, 983044, 327682, 6, 851975, 327682, 4, 917511, 327682, 5, 983047, 327682, 6, 851982, 327682, 268435460, 917518, 327682, 268435461, 983054, 327682, 268435462, 851985, 327682, 268435460, 917521, 327682, 268435461, 983057, 327682, 268435462, 851988, 327682, 268435460, 917524, 327682, 268435461, 983060, 327682, 268435462, 655379, 655362, 0, 589843, 2228245, 1, 589841, 65540, 3, 655371, 655362, 0)
 layer_4/name = "Deco 2"
+
+[node name="transport" parent="." instance=ExtResource("2_pdjj7")]
+position = Vector2(178, 316)
+rotation = 1.5708
+dest_scene = "hallway2"
+spawnin = Vector2(208, 96)

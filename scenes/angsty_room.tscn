@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://drsd3q76qn1g4"]
+[gd_scene load_steps=3 format=3 uid="uid://drsd3q76qn1g4"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_2dbuk"]
+
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_ky3oi"]
+[ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_vjqa0"]
+
 
 [node name="AngstyRoom" type="Node2D"]
 
@@ -21,3 +24,20 @@ layer_5/name = "Deco3"
 layer_5/tile_data = PackedInt32Array(786446, 6619144, 29, 851982, 6619144, 30, 786445, 6553608, 29, 851981, 6553608, 30)
 layer_6/name = "Deco4"
 layer_6/tile_data = PackedInt32Array(786444, 18, 13, 786445, 196626, 14, 786446, 18, 268435469, 851982, 18, 268501006, 851981, 196626, 65548, 851980, 18, 65550)
+
+[node name="transport" parent="." instance=ExtResource("2_vjqa0")]
+position = Vector2(261, 112)
+dest_scene = "hallway4"
+spawnin = Vector2(143, 140)
+
+[node name="transport2" parent="." instance=ExtResource("2_vjqa0")]
+position = Vector2(48, 197)
+rotation = 1.5708
+dest_scene = "hallway3"
+spawnin = Vector2(16, 98)
+
+[node name="transport3" parent="." instance=ExtResource("2_vjqa0")]
+position = Vector2(176, 278)
+rotation = 1.5708
+dest_scene = "hallway3"
+spawnin = Vector2(112, 97)

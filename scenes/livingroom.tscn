@@ -7,7 +7,9 @@
 position = Vector2(5, 31)
 
 [node name="transport" parent="." instance=ExtResource("1_jeivo")]
-position = Vector2(-8, 81)
+position = Vector2(-18, 81)
+dest_scene = "kitchen"
+spawnin = Vector2(14, 128)
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1

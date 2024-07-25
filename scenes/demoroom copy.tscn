@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bb637sqphoxl8"]
+[gd_scene load_steps=19 format=3 uid="uid://bb637sqphoxl8"]
 
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="2_evybg"]
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="2_f7twn"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://vrw23u41vv5q" path="res://assets/interactables/cozyint-toaster-still-og-EDITED.png" id="9_8npm7"]
 [ext_resource type="Texture2D" uid="uid://bovtcbpv8oofa" path="res://assets/interactables/cozyint-toaster-pops.png" id="10_d6jcq"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="13_5nsbu"]
-[ext_resource type="PackedScene" uid="uid://bfwt6s3wfs6qt" path="res://scenes/livingroom.tscn" id="14_nqnhm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npwt6"]
 size = Vector2(29.358, 48.2935)
@@ -88,6 +87,11 @@ toggleable = true
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_1is7r")
 
+[node name="transport" parent="." instance=ExtResource("13_5nsbu")]
+position = Vector2(-13, 128)
+dest_scene = "livingroom"
+spawnin = Vector2(8, 84)
+
 [node name="fridge" parent="." instance=ExtResource("2_evybg")]
 position = Vector2(34, 64)
 first_texture = ExtResource("5_8yjnr")
@@ -97,8 +101,3 @@ toggleable = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fridge"]
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_lcg8j")
-
-[node name="transport" parent="." instance=ExtResource("13_5nsbu")]
-position = Vector2(-6, 127)
-sceneto = ExtResource("14_nqnhm")
-spawnin = Vector2(32, 87)

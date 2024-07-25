@@ -45,7 +45,7 @@ dest_scene = "gamesroom"
 spawnin = Vector2(216, 240)
 
 [node name="transport4" parent="." instance=ExtResource("2_de6ru")]
-position = Vector2(351, 160)
+position = Vector2(351, 161)
 rotation = 1.5708
 dest_scene = "bathroom2"
 spawnin = Vector2(13, 85)

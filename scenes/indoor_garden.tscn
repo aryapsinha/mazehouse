@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmwleib7n5igm"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_6w5lw"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_6w5lw"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_yaogy"]
 
 [node name="IndoorGarden" type="Node2D"]

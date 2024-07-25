@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfwt6s3wfs6qt"]
+[gd_scene load_steps=7 format=3 uid="uid://bfwt6s3wfs6qt"]
 
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="1_jeivo"]
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_jyilb"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_r8e5o"]
+[ext_resource type="Texture2D" uid="uid://12n77l7hlocw" path="res://assets/interactables/aseprite-orangesofa-front-pillow-og.png" id="4_14itd"]
+[ext_resource type="Texture2D" uid="uid://buhxhxj5kknmq" path="res://assets/interactables/aseprite-orangesofa-front-pillow1.png" id="5_d6qgh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efmo3"]
+size = Vector2(51, 30)
 
 [node name="livingroom" type="Node2D"]
 position = Vector2(5, 31)
@@ -27,6 +33,17 @@ layer_5/tile_data = PackedInt32Array(262156, 196629, 13, 327698, 1507346, 36, 39
 position = Vector2(308, 159)
 dest_scene = "hallway2"
 spawnin = Vector2(32, 111)
+
+[node name="interactable" parent="." instance=ExtResource("3_r8e5o")]
+position = Vector2(202, 105)
+first_texture = ExtResource("4_14itd")
+second_texture = ExtResource("5_d6qgh")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+visible = false
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_efmo3")
 
 [node name="transport" parent="." instance=ExtResource("1_jeivo")]
 position = Vector2(-18, 79)

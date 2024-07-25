@@ -29,3 +29,8 @@ position = Vector2(255, 376)
 rotation = 1.5708
 dest_scene = "indoorgarden"
 spawnin = Vector2(14, 145)
+
+[node name="transport2" parent="." instance=ExtResource("2_nnt0y")]
+position = Vector2(-4, 95)
+dest_scene = "masterbedroom"
+spawnin = Vector2(-47, 68)

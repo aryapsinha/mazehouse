@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bg8wsuphvqkfa"]
+[gd_scene load_steps=3 format=3 uid="uid://bg8wsuphvqkfa"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_wj8ij"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_wj8ij"]
+[ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_7rmuc"]
 
 [node name="storageroom" type="Node2D"]
 
@@ -18,3 +19,8 @@ layer_3/name = "Deco 1"
 layer_3/tile_data = PackedInt32Array(131073, 458756, 2, 131076, 524291, 15, 131077, 589827, 15, 131078, 655363, 15, 65544, 2, 16, 131080, 2, 17, 196610, 393220, 65538, 262151, 458756, 3, 131079, 262148, 4, 131075, 327684, 3, 393222, 458755, 0, 393217, 393220, 65538, 458755, 393220, 1610612738, 458758, 458755, 1, 458759, 4, 65537, 262153, 589826, 4, 327689, 589826, 5, 393225, 589826, 6)
 layer_4/name = "Deco 2"
 layer_4/tile_data = PackedInt32Array(196610, 458756, 268500999, 262153, 262148, 1, 393225, 131074, 268435456, 458761, 131074, 268435457, 131076, 262148, 3, 131077, 262148, 1, 131078, 393220, 7, 393219, 3, 268435466, 458755, 3, 268435467)
+
+[node name="transport" parent="." instance=ExtResource("2_7rmuc")]
+position = Vector2(-18, 113)
+dest_scene = "masterbedroom"
+spawnin = Vector2(331, 144)

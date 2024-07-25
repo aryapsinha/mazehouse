@@ -29,6 +29,6 @@ dest_scene = "angsty"
 spawnin = Vector2(236, 112)
 
 [node name="transport3" parent="." instance=ExtResource("2_l17dg")]
-position = Vector2(143, 63)
+position = Vector2(144, 61)
 dest_scene = "masterbedroom"
-spawnin = Vector2(144, 248)
+spawnin = Vector2(143, 260)

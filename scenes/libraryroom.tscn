@@ -1,8 +1,13 @@
-
-[gd_scene load_steps=3 format=3 uid="uid://bnguj0vql684a"]
+[gd_scene load_steps=7 format=3 uid="uid://bnguj0vql684a"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_rh8b3"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="2_1dxiy"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_pdjj7"]
+[ext_resource type="Texture2D" uid="uid://b8lk6bfxn3nlv" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD.png" id="3_dof48"]
+[ext_resource type="Texture2D" uid="uid://b3grtjj1bh6ur" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD-on.png" id="4_h78e6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e6hf"]
+size = Vector2(15, 44)
 
 [node name="libraryroom" type="Node2D"]
 
@@ -18,6 +23,36 @@ layer_2/tile_data = PackedInt32Array(786436, 327682, 4, 851972, 327682, 5, 91750
 layer_3/name = "Deco 1"
 layer_3/tile_data = PackedInt32Array(851972, 327682, 4, 917508, 327682, 5, 983044, 327682, 6, 851975, 327682, 4, 917511, 327682, 5, 983047, 327682, 6, 851982, 327682, 268435460, 917518, 327682, 268435461, 983054, 327682, 268435462, 851985, 327682, 268435460, 917521, 327682, 268435461, 983057, 327682, 268435462, 851988, 327682, 268435460, 917524, 327682, 268435461, 983060, 327682, 268435462, 655379, 655362, 0, 589843, 2228245, 1, 589841, 65540, 3, 655371, 655362, 0)
 layer_4/name = "Deco 2"
+
+[node name="interactable" parent="." instance=ExtResource("2_1dxiy")]
+position = Vector2(24, 71)
+first_texture = ExtResource("3_dof48")
+second_texture = ExtResource("4_h78e6")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_5e6hf")
+
+[node name="interactable2" parent="." instance=ExtResource("2_1dxiy")]
+position = Vector2(88, 264)
+first_texture = ExtResource("3_dof48")
+second_texture = ExtResource("4_h78e6")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable2"]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_5e6hf")
+
+[node name="interactable3" parent="." instance=ExtResource("2_1dxiy")]
+position = Vector2(264, 264)
+first_texture = ExtResource("3_dof48")
+second_texture = ExtResource("4_h78e6")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable3"]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_5e6hf")
 
 [node name="transport" parent="." instance=ExtResource("2_pdjj7")]
 position = Vector2(178, 316)

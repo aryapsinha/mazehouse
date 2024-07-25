@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://4y4o5q1v4g7t"]
+[gd_scene load_steps=3 format=3 uid="uid://4y4o5q1v4g7t"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_0kvgj"]
+[ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_m6pj5"]
 
 [node name="bathroom2" type="Node2D"]
 
@@ -16,3 +17,9 @@ layer_2/name = "Base Deco"
 layer_2/tile_data = PackedInt32Array(65540, 1441798, 0, 65542, 28, 65540, 65538, 65538, 65552, 131074, 65538, 65553, 65539, 131074, 65552, 131075, 131074, 65553, 327687, 262165, 10, 262150, 983051, 0, 327686, 983051, 1, 262149, 917515, 0, 327685, 917515, 1)
 layer_3/name = "Deco 1"
 layer_3/tile_data = PackedInt32Array(6, 6, 65541)
+
+[node name="transport" parent="." instance=ExtResource("2_m6pj5")]
+position = Vector2(69, 138)
+rotation = 1.5708
+dest_scene = "hallway3"
+spawnin = Vector2(49, 137)

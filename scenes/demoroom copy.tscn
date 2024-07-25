@@ -89,8 +89,8 @@ shape = SubResource("RectangleShape2D_1is7r")
 
 [node name="transport" parent="." instance=ExtResource("13_5nsbu")]
 position = Vector2(-13, 128)
-dest_scene = "livingroom"
-spawnin = Vector2(8, 84)
+dest_scene = "laundryroom"
+spawnin = Vector2(7, 112)
 
 [node name="fridge" parent="." instance=ExtResource("2_evybg")]
 position = Vector2(34, 64)
@@ -101,3 +101,8 @@ toggleable = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fridge"]
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_lcg8j")
+
+[node name="transport2" parent="." instance=ExtResource("13_5nsbu")]
+position = Vector2(261, 164)
+dest_scene = "hallway1"
+spawnin = Vector2(9, 112)

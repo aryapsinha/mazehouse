@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/transport.gd" id="1_cxs58"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ptwju"]
-size = Vector2(20, 33)
+size = Vector2(23, 31.5)
 
 [node name="transport" type="Area2D"]
 script = ExtResource("1_cxs58")

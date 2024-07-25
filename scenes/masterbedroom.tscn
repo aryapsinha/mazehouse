@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dy0dku3wsrn2y"]
+[gd_scene load_steps=3 format=3 uid="uid://dy0dku3wsrn2y"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_w800j"]
+[ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_vpxac"]
 
 [node name="masterbedroom" type="Node2D"]
 
@@ -22,3 +23,6 @@ layer_5/name = "Deco 3"
 layer_5/tile_data = PackedInt32Array(458771, 327682, 268435460, 524307, 327682, 268435461, 589843, 327682, 268435462, 589836, 196610, 65553, 589837, 262146, 65553, 524300, 196610, 65552, 524301, 262146, 65552)
 layer_6/name = "Deco 4"
 layer_6/tile_data = PackedInt32Array(589843, 1703957, 268501002, 524307, 1703957, 268501001)
+
+[node name="transport" parent="." instance=ExtResource("2_vpxac")]
+position = Vector2(-38, 80)

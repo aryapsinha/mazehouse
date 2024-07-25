@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://df21r6wwvp8r5"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_netah"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_netah"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_l17dg"]
 
 [node name="Hallway4" type="Node2D"]
@@ -23,7 +23,12 @@ dest_scene = "indoorgarden"
 spawnin = Vector2(112, 284)
 
 [node name="transport2" parent="." instance=ExtResource("2_l17dg")]
-position = Vector2(143, 163)
+position = Vector2(144, 160)
 rotation = 1.5708
 dest_scene = "angsty"
 spawnin = Vector2(236, 112)
+
+[node name="transport3" parent="." instance=ExtResource("2_l17dg")]
+position = Vector2(143, 63)
+dest_scene = "masterbedroom"
+spawnin = Vector2(144, 248)

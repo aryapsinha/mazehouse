@@ -30,3 +30,8 @@ spawnin = Vector2(96, 136)
 position = Vector2(239, 240)
 dest_scene = "hallway2"
 spawnin = Vector2(208, 138)
+
+[node name="transport3" parent="." instance=ExtResource("2_h5t7j")]
+position = Vector2(-12, 96)
+dest_scene = "indoorgarden"
+spawnin = Vector2(442, 159)

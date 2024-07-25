@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjx2fc6chu11s"]
+[gd_scene load_steps=3 format=3 uid="uid://bjx2fc6chu11s"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_utbj6"]
+[ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_nd7t3"]
 
 [node name="Nursery_ChildRoom" type="Node2D"]
 
@@ -17,3 +18,9 @@ layer_3/name = "BaseDeco"
 layer_3/tile_data = PackedInt32Array(393217, 5701640, 805306411, 393218, 5636104, 805306411, 327682, 5308424, 44, 327681, 5767176, 44, 262145, 5767176, 43, 262146, 5308424, 43, 458762, 196630, 0, 458759, 131094, 0, 524295, 786454, 0, 327684, 589846, 0, 327680, 524310, 65537, 327685, 524310, 0, 589824, 5832712, 1610612761, 655360, 5767176, 1610612761, 589825, 5832712, 1610612762, 720896, 131094, 65537, 655361, 5767176, 1610612762, 589826, 22, 1, 393224, 327702, 0, 393225, 393238, 0, 524302, 524310, 65536, 262159, 1114134, 4, 327695, 1114134, 5, 786442, 262162, 16, 786439, 131090, 16, 327693, 262166, 0, 655371, 22, 0, 589833, 458774, 0)
 layer_4/name = "Deco1"
 layer_4/tile_data = PackedInt32Array(393217, 393224, 2, 393218, 458760, 2, 327695, 327688, 4, 524303, 851990, 65536)
+
+[node name="transport" parent="." instance=ExtResource("2_nd7t3")]
+position = Vector2(144, 211)
+rotation = 1.5708
+dest_scene = "hallway3"
+spawnin = Vector2(271, 138)

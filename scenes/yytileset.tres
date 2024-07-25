@@ -19213,9 +19213,7 @@ texture = ExtResource("11_y36b6")
 2:13/next_alternative_id = 2
 2:13/0 = 0
 2:13/1 = 1
-
 2:13/1/texture_origin = Vector2i(-9, -6)
-
 3:13/0 = 0
 4:13/0 = 0
 5:13/0 = 0

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgy8b56suhoix"]
+[gd_scene load_steps=3 format=3 uid="uid://cgy8b56suhoix"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_h432a"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_h432a"]
+[ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_nnt0y"]
 
 [node name="studyroom" type="Node2D"]
 
@@ -22,3 +23,9 @@ layer_5/name = "Deco 3"
 layer_5/tile_data = PackedInt32Array(720897, 720898, 0, 786433, 720898, 1)
 layer_6/name = "Deco 4"
 layer_6/tile_data = PackedInt32Array(655361, 2, 65552, 720897, 2, 65553)
+
+[node name="transport" parent="." instance=ExtResource("2_nnt0y")]
+position = Vector2(255, 376)
+rotation = 1.5708
+dest_scene = "indoorgarden"
+spawnin = Vector2(14, 145)

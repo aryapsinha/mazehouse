@@ -20,7 +20,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if interactable:
-		
+		#Player.message.show()
 		if not toggleable and Input.is_action_pressed("interact"):
 			$Sprite2D.set_texture(second_texture)
 			Player.interact()
@@ -41,7 +41,8 @@ func _process(delta: float) -> void:
 				isFirst = true
 		if not Input.is_action_pressed("interact"):
 			Player.normal()
-	
+	#else:
+		#Player.message.hide() 
 	
 		#normalSprite.emit()
 		

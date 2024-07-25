@@ -1,9 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfwt6s3wfs6qt"]
+[gd_scene load_steps=3 format=3 uid="uid://bfwt6s3wfs6qt"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_jyilb"]
+[ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="1_jeivo"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_jyilb"]
 
 [node name="livingroom" type="Node2D"]
-position = Vector2(3, 20)
+position = Vector2(5, 31)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, 64)
@@ -21,3 +22,13 @@ layer_4/name = "Layering"
 layer_4/z_index = 11
 layer_5/name = "Deco 2"
 layer_5/tile_data = PackedInt32Array(262156, 196629, 13, 327698, 1507346, 36, 393234, 1507346, 36, 589836, 1507346, 1610612772, 589837, 1507346, 1610612772)
+
+[node name="transport2" parent="." instance=ExtResource("1_jeivo")]
+position = Vector2(308, 159)
+dest_scene = "hallway2"
+spawnin = Vector2(32, 111)
+
+[node name="transport" parent="." instance=ExtResource("1_jeivo")]
+position = Vector2(-18, 79)
+dest_scene = "hallway1"
+spawnin = Vector2(160, 137)

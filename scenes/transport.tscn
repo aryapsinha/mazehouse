@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci4jxr4grn1j0"]
+
+[ext_resource type="Script" path="res://scripts/transport.gd" id="1_cxs58"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptwju"]
+size = Vector2(23, 31.5)
+
+[node name="transport" type="Area2D"]
+script = ExtResource("1_cxs58")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ptwju")
+
+[node name="Spawn" type="Marker2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

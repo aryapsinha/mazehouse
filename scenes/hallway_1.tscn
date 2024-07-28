@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://tdey0ckls6w1"]
+[gd_scene load_steps=19 format=3 uid="uid://tdey0ckls6w1"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_3cvj4"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_j471h"]
@@ -9,14 +9,29 @@
 [ext_resource type="Texture2D" uid="uid://mvhoxbymmkr1" path="res://assets/interactables/clothes-stand-TD/clothes-stand-filled-TD.png" id="7_wn185"]
 [ext_resource type="Texture2D" uid="uid://c48lvw2susvx" path="res://assets/interactables/plant pot/aseprite-plant-sapling_og.png" id="8_es7hf"]
 [ext_resource type="Texture2D" uid="uid://t7kbiu3rx8q1" path="res://assets/interactables/plant pot/aseprite-plant-grown.png" id="9_k503e"]
-[ext_resource type="Texture2D" uid="uid://bhw58tnusnq32" path="res://assets/interactables/flower vase/aseprite-flowervase-upright-og.png" id="10_cb43b"]
-[ext_resource type="Texture2D" uid="uid://whe507hofww3" path="res://assets/interactables/flower vase/aseprite-flowervase-toppled.png" id="11_c0w8b"]
+[ext_resource type="Texture2D" uid="uid://c10mgu6hbfnms" path="res://assets/interactables/flower vase/aseprite-flowervase-upright-og.png" id="10_cb43b"]
+[ext_resource type="Texture2D" uid="uid://pbl2i5eige5i" path="res://assets/interactables/flower vase/aseprite-flowervase-toppled.png" id="11_c0w8b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftiq1"]
+size = Vector2(19, 31)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gm5mn"]
 load_path = "res://.godot/imported/cozyint-curtains-pink-open.png-c91af21f1d5a6baeaa647bd5dcd11169.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gqfrt"]
 load_path = "res://.godot/imported/cozyint-curtains-pink-drawn.png-128a7958f5c44058daaf4569a8edcf0e.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_64kv7"]
+size = Vector2(44, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtbsu"]
+size = Vector2(19, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mfrtg"]
+size = Vector2(12, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7w0bq"]
+size = Vector2(16, 24)
 
 [node name="Hallway1" type="Node2D"]
 
@@ -54,21 +69,88 @@ dest_scene = "livingroom"
 spawnin = Vector2(12, 81)
 
 [node name="lamp" parent="." instance=ExtResource("3_3qvhg")]
+position = Vector2(104, 120)
 first_texture = ExtResource("4_l2pnq")
 second_texture = ExtResource("5_rajlc")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lamp"]
+position = Vector2(0.5, 6.5)
+shape = SubResource("RectangleShape2D_ftiq1")
 
 [node name="curtain" parent="." instance=ExtResource("3_3qvhg")]
+position = Vector2(40, 40)
 first_texture = SubResource("CompressedTexture2D_gm5mn")
 second_texture = SubResource("CompressedTexture2D_gqfrt")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="curtain"]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_64kv7")
+
+[node name="curtain2" parent="." instance=ExtResource("3_3qvhg")]
+position = Vector2(104, 40)
+first_texture = SubResource("CompressedTexture2D_gm5mn")
+second_texture = SubResource("CompressedTexture2D_gqfrt")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="curtain2"]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_64kv7")
+
+[node name="curtain3" parent="." instance=ExtResource("3_3qvhg")]
+position = Vector2(167, 40)
+first_texture = SubResource("CompressedTexture2D_gm5mn")
+second_texture = SubResource("CompressedTexture2D_gqfrt")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="curtain3"]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_64kv7")
 
 [node name="clothes-stand" parent="." instance=ExtResource("3_3qvhg")]
+position = Vector2(248, 69)
 first_texture = ExtResource("6_i5nxn")
 second_texture = ExtResource("7_wn185")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="clothes-stand"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_jtbsu")
 
 [node name="plant-type1" parent="." instance=ExtResource("3_3qvhg")]
+position = Vector2(8, 125)
 first_texture = ExtResource("8_es7hf")
 second_texture = ExtResource("9_k503e")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant-type1"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_mfrtg")
+
+[node name="plant-type1-2" parent="." instance=ExtResource("3_3qvhg")]
+position = Vector2(296, 125)
+first_texture = ExtResource("8_es7hf")
+second_texture = ExtResource("9_k503e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant-type1-2"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_mfrtg")
+
 [node name="plant-type2" parent="." instance=ExtResource("3_3qvhg")]
+position = Vector2(191, 131)
 first_texture = ExtResource("10_cb43b")
 second_texture = ExtResource("11_c0w8b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant-type2"]
+position = Vector2(-6, 0)
+shape = SubResource("RectangleShape2D_7w0bq")
+
+[node name="plant-type2-2" parent="." instance=ExtResource("3_3qvhg")]
+position = Vector2(129, 131)
+scale = Vector2(-1, 1)
+first_texture = ExtResource("10_cb43b")
+second_texture = ExtResource("11_c0w8b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant-type2-2"]
+position = Vector2(-6, 0)
+shape = SubResource("RectangleShape2D_7w0bq")

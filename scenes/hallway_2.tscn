@@ -1,7 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://dk0qlla2jm6ys"]
+[gd_scene load_steps=16 format=3 uid="uid://dk0qlla2jm6ys"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_hreya"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_de6ru"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_4ex1a"]
+[ext_resource type="Texture2D" uid="uid://cqy761lpbrxvf" path="res://assets/interactables/curtains (brown)/cozyint-curtains-brown-open.png" id="4_ingk4"]
+[ext_resource type="Texture2D" uid="uid://ccaoo3h2i3h78" path="res://assets/interactables/curtains (brown)/cozyint-curtains-brown-drawn.png" id="5_pcnaq"]
+[ext_resource type="Texture2D" uid="uid://b8lk6bfxn3nlv" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD.png" id="6_ocksl"]
+[ext_resource type="Texture2D" uid="uid://b3grtjj1bh6ur" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD-on.png" id="7_c6242"]
+[ext_resource type="Texture2D" uid="uid://eaibis2er8ey" path="res://assets/interactables/coffee-cup-TD/coffee-cup-TD-full.png" id="8_yg30m"]
+[ext_resource type="Texture2D" uid="uid://bij4lw4ce44lj" path="res://assets/interactables/coffee-cup-TD/coffee-cup-TD.png" id="9_d3ek8"]
+[ext_resource type="Texture2D" uid="uid://c48lvw2susvx" path="res://assets/interactables/plant pot/aseprite-plant-sapling_og.png" id="10_si8wu"]
+[ext_resource type="Texture2D" uid="uid://t7kbiu3rx8q1" path="res://assets/interactables/plant pot/aseprite-plant-grown.png" id="11_fqq0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4oyib"]
+size = Vector2(21, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hw8nj"]
+size = Vector2(44, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18im0"]
+size = Vector2(20, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81v1r"]
+size = Vector2(16, 26)
 
 [node name="Hallway2" type="Node2D"]
 
@@ -55,3 +76,59 @@ position = Vector2(351, 161)
 rotation = 1.5708
 dest_scene = "bathroom2"
 spawnin = Vector2(13, 85)
+
+[node name="cup" parent="." instance=ExtResource("3_4ex1a")]
+position = Vector2(185, 130)
+first_texture = ExtResource("8_yg30m")
+second_texture = ExtResource("9_d3ek8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cup"]
+position = Vector2(-1.5, 1)
+shape = SubResource("RectangleShape2D_4oyib")
+
+[node name="curtain" parent="." instance=ExtResource("3_4ex1a")]
+position = Vector2(40, 40)
+first_texture = ExtResource("4_ingk4")
+second_texture = ExtResource("5_pcnaq")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="curtain"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_hw8nj")
+
+[node name="curtain2" parent="." instance=ExtResource("3_4ex1a")]
+position = Vector2(120, 40)
+first_texture = ExtResource("4_ingk4")
+second_texture = ExtResource("5_pcnaq")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="curtain2"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_hw8nj")
+
+[node name="lamp" parent="." instance=ExtResource("3_4ex1a")]
+position = Vector2(248, 71)
+first_texture = ExtResource("6_ocksl")
+second_texture = ExtResource("7_c6242")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lamp"]
+shape = SubResource("RectangleShape2D_18im0")
+
+[node name="plant" parent="." instance=ExtResource("3_4ex1a")]
+position = Vector2(8, 125)
+first_texture = ExtResource("10_si8wu")
+second_texture = ExtResource("11_fqq0i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_81v1r")
+
+[node name="plant2" parent="." instance=ExtResource("3_4ex1a")]
+position = Vector2(376, 125)
+first_texture = ExtResource("10_si8wu")
+second_texture = ExtResource("11_fqq0i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant2"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_81v1r")

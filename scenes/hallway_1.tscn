@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://tdey0ckls6w1"]
+[gd_scene load_steps=20 format=3 uid="uid://tdey0ckls6w1"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_3cvj4"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_j471h"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_3qvhg"]
 [ext_resource type="Texture2D" uid="uid://b8lk6bfxn3nlv" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD.png" id="4_l2pnq"]
 [ext_resource type="Texture2D" uid="uid://b3grtjj1bh6ur" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD-on.png" id="5_rajlc"]
+[ext_resource type="Texture2D" uid="uid://csp8pn25mtgix" path="res://assets/interactables/curtains (pink)/cozyint-curtains-pink-open.png" id="6_85j1a"]
 [ext_resource type="Texture2D" uid="uid://c5ry5846jjdsu" path="res://assets/interactables/clothes-stand-TD/clothes-stand-empty-TD.png" id="6_i5nxn"]
 [ext_resource type="Texture2D" uid="uid://mvhoxbymmkr1" path="res://assets/interactables/clothes-stand-TD/clothes-stand-filled-TD.png" id="7_wn185"]
 [ext_resource type="Texture2D" uid="uid://c48lvw2susvx" path="res://assets/interactables/plant pot/aseprite-plant-sapling_og.png" id="8_es7hf"]
@@ -15,14 +16,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ftiq1"]
 size = Vector2(19, 31)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gm5mn"]
-load_path = "res://.godot/imported/cozyint-curtains-pink-open.png-c91af21f1d5a6baeaa647bd5dcd11169.ctex"
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gqfrt"]
 load_path = "res://.godot/imported/cozyint-curtains-pink-drawn.png-128a7958f5c44058daaf4569a8edcf0e.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64kv7"]
 size = Vector2(44, 41)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gm5mn"]
+load_path = "res://.godot/imported/cozyint-curtains-pink-open.png-c91af21f1d5a6baeaa647bd5dcd11169.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jtbsu"]
 size = Vector2(19, 44)
@@ -80,7 +81,7 @@ shape = SubResource("RectangleShape2D_ftiq1")
 
 [node name="curtain" parent="." instance=ExtResource("3_3qvhg")]
 position = Vector2(40, 40)
-first_texture = SubResource("CompressedTexture2D_gm5mn")
+first_texture = ExtResource("6_85j1a")
 second_texture = SubResource("CompressedTexture2D_gqfrt")
 toggleable = true
 

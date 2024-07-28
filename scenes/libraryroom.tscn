@@ -1,13 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnguj0vql684a"]
+[gd_scene load_steps=13 format=3 uid="uid://bnguj0vql684a"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_rh8b3"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="2_1dxiy"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_pdjj7"]
 [ext_resource type="Texture2D" uid="uid://b8lk6bfxn3nlv" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD.png" id="3_dof48"]
 [ext_resource type="Texture2D" uid="uid://b3grtjj1bh6ur" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD-on.png" id="4_h78e6"]
+[ext_resource type="Texture2D" uid="uid://d251of317ctho" path="res://assets/interactables/book-TD/book-close-TD.png" id="5_kecdt"]
+[ext_resource type="Texture2D" uid="uid://emqnh3g6p1xk" path="res://assets/interactables/book-TD/book-open-TD.png" id="6_ic8xw"]
+[ext_resource type="Texture2D" uid="uid://c7bsenge157tg" path="res://assets/interactables/laptop screens/cozyint-laptop-screen1.png" id="7_3b0vo"]
+[ext_resource type="Texture2D" uid="uid://delfgfbp17occ" path="res://assets/interactables/laptop screens/cozyint-laptop-screen3.png" id="8_r8e4e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5e6hf"]
 size = Vector2(15, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mddl3"]
+size = Vector2(17, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmvxg"]
+size = Vector2(24, 21)
 
 [node name="libraryroom" type="Node2D"]
 
@@ -53,6 +63,25 @@ toggleable = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactable3"]
 position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_5e6hf")
+
+[node name="interactable4" parent="." instance=ExtResource("2_1dxiy")]
+position = Vector2(282, 155)
+first_texture = ExtResource("5_kecdt")
+second_texture = ExtResource("6_ic8xw")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable4"]
+position = Vector2(-4.5, 3.5)
+shape = SubResource("RectangleShape2D_mddl3")
+
+[node name="interactable5" parent="." instance=ExtResource("2_1dxiy")]
+position = Vector2(309, 150)
+first_texture = ExtResource("7_3b0vo")
+second_texture = ExtResource("8_r8e4e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable5"]
+position = Vector2(1, 6.5)
+shape = SubResource("RectangleShape2D_kmvxg")
 
 [node name="transport" parent="." instance=ExtResource("2_pdjj7")]
 position = Vector2(178, 316)

@@ -1,7 +1,48 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy0dku3wsrn2y"]
+[gd_scene load_steps=28 format=3 uid="uid://dy0dku3wsrn2y"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_w800j"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_y5drp"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_cv6wp"]
+[ext_resource type="Texture2D" uid="uid://dld7pwvyhhqwc" path="res://assets/interactables/television box screens/cozyint-tvbox-screen2.png" id="4_0f5g0"]
+[ext_resource type="Texture2D" uid="uid://b5exkk6tw18dy" path="res://assets/interactables/toys (glowy - nursery)/cozyint-toy-duck-off.png" id="4_ejlxu"]
+[ext_resource type="Texture2D" uid="uid://cxmdl1f857ovd" path="res://assets/interactables/television box screens/cozyint-tvbox-screen3.png" id="5_nag75"]
+[ext_resource type="Texture2D" uid="uid://d1860lvr0ycd7" path="res://assets/interactables/toys (glowy - nursery)/cozyint-toy-duck-lit.png" id="5_robwp"]
+[ext_resource type="Texture2D" uid="uid://dvu23sr0qx3kf" path="res://assets/interactables/toys (glowy - nursery)/cozyint-toy-star-off.png" id="6_ogjdy"]
+[ext_resource type="Texture2D" uid="uid://b7u3t4gupvd1n" path="res://assets/interactables/toys (glowy - nursery)/cozyint-toy-star-lit.png" id="7_r1fxb"]
+[ext_resource type="Texture2D" uid="uid://bm26wwnc51ob3" path="res://assets/interactables/drawer (short)/topdown-drawer-short-open.png" id="8_caavb"]
+[ext_resource type="Texture2D" uid="uid://b18wopod6ehhs" path="res://assets/interactables/drawer (short)/topdown-drawer-short-shut.png" id="9_vk5ow"]
+[ext_resource type="Texture2D" uid="uid://b5ixcs2l46bee" path="res://assets/interactables/ironing board/ironingboard-clear-td.png" id="10_8a3wg"]
+[ext_resource type="Texture2D" uid="uid://dwvaf1daq04mr" path="res://assets/interactables/ironing board/ironingboard-used-td.png" id="11_f18yk"]
+[ext_resource type="Texture2D" uid="uid://c48lvw2susvx" path="res://assets/interactables/plant pot/aseprite-plant-sapling_og.png" id="12_535hn"]
+[ext_resource type="Texture2D" uid="uid://t7kbiu3rx8q1" path="res://assets/interactables/plant pot/aseprite-plant-grown.png" id="13_l5ap8"]
+[ext_resource type="Texture2D" uid="uid://nxhh5hgctcl2" path="res://assets/interactables/toilet-side-TD/toilet-side-TD-on.png" id="14_fajju"]
+[ext_resource type="Texture2D" uid="uid://0thllmrke5m6" path="res://assets/interactables/toilet-side-TD/toilet-side-TD.png" id="15_451lo"]
+[ext_resource type="Texture2D" uid="uid://buqqf2wqf0s7n" path="res://assets/interactables/bathtub-gold (wider, new og)/cozyint-bathtub-vertical-filled.png" id="16_6jjo5"]
+[ext_resource type="Texture2D" uid="uid://xaqvql8pjmiv" path="res://assets/interactables/bathtub-gold (wider, new og)/cozyint-bathtub-vertical-empty.png" id="17_5gaan"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psn84"]
+size = Vector2(30, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8md64"]
+size = Vector2(12, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pr4i"]
+size = Vector2(9.7112, 19.0451)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1q1k"]
+size = Vector2(11, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4awgs"]
+size = Vector2(27, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47ix8"]
+size = Vector2(18, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fheik"]
+size = Vector2(21, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwwly"]
+size = Vector2(32, 42)
 
 [node name="masterbedroom" type="Node2D"]
 
@@ -40,3 +81,86 @@ spawnin = Vector2(44, 94)
 position = Vector2(351, 144)
 dest_scene = "storageroom"
 spawnin = Vector2(10, 116)
+
+[node name="tvbox-screen" parent="." instance=ExtResource("3_cv6wp")]
+position = Vector2(95, 37)
+first_texture = ExtResource("4_0f5g0")
+second_texture = ExtResource("5_nag75")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tvbox-screen"]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_psn84")
+
+[node name="toy-duck" parent="." instance=ExtResource("3_cv6wp")]
+position = Vector2(166, 139)
+first_texture = ExtResource("4_ejlxu")
+second_texture = ExtResource("5_robwp")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toy-duck"]
+position = Vector2(-5, 2)
+shape = SubResource("RectangleShape2D_8md64")
+
+[node name="toy-star" parent="." instance=ExtResource("3_cv6wp")]
+position = Vector2(155, 122)
+rotation = -1.59463
+first_texture = ExtResource("6_ogjdy")
+second_texture = ExtResource("7_r1fxb")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toy-star"]
+position = Vector2(0.28595, -3.47368)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1pr4i")
+
+[node name="cupboard" parent="." instance=ExtResource("3_cv6wp")]
+z_index = 100
+position = Vector2(179, 130)
+scale = Vector2(-1, 1)
+first_texture = ExtResource("8_caavb")
+second_texture = ExtResource("9_vk5ow")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cupboard"]
+position = Vector2(4, 1)
+shape = SubResource("RectangleShape2D_b1q1k")
+
+[node name="ironing-board" parent="." instance=ExtResource("3_cv6wp")]
+position = Vector2(207, 137)
+first_texture = ExtResource("10_8a3wg")
+second_texture = ExtResource("11_f18yk")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ironing-board"]
+position = Vector2(0.5, 3.5)
+shape = SubResource("RectangleShape2D_4awgs")
+
+[node name="plant" parent="." instance=ExtResource("3_cv6wp")]
+position = Vector2(311, 158)
+first_texture = ExtResource("12_535hn")
+second_texture = ExtResource("13_l5ap8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant"]
+position = Vector2(-1, 9)
+shape = SubResource("RectangleShape2D_47ix8")
+
+[node name="toilet" parent="." instance=ExtResource("3_cv6wp")]
+position = Vector2(203, 194)
+first_texture = ExtResource("14_fajju")
+second_texture = ExtResource("15_451lo")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toilet"]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_fheik")
+
+[node name="bathtub" parent="." instance=ExtResource("3_cv6wp")]
+position = Vector2(307, 229)
+first_texture = ExtResource("16_6jjo5")
+second_texture = ExtResource("17_5gaan")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bathtub"]
+position = Vector2(-4, -6)
+shape = SubResource("RectangleShape2D_vwwly")

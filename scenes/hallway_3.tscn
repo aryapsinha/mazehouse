@@ -1,7 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv4cp7drf2ll8"]
+[gd_scene load_steps=10 format=3 uid="uid://dv4cp7drf2ll8"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_f7jm4"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_uqtb4"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_pwb3c"]
+[ext_resource type="Texture2D" uid="uid://c10mgu6hbfnms" path="res://assets/interactables/flower vase/aseprite-flowervase-upright-og.png" id="4_igrmw"]
+[ext_resource type="Texture2D" uid="uid://pbl2i5eige5i" path="res://assets/interactables/flower vase/aseprite-flowervase-toppled.png" id="5_5sttf"]
+[ext_resource type="Texture2D" uid="uid://n4foo3mxu22j" path="res://assets/interactables/grandfather clock/topdown-clock-grandfather-s1.png" id="6_6g13q"]
+[ext_resource type="Texture2D" uid="uid://7gt1cnwhhuke" path="res://assets/interactables/grandfather clock/topdown-clock-grandfather-s2.png" id="7_k5ode"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkq5t"]
+size = Vector2(19, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5erj0"]
+size = Vector2(25, 46)
 
 [node name="Hallway3" type="Node2D"]
 
@@ -45,3 +56,50 @@ position = Vector2(271, 165)
 rotation = 1.5708
 dest_scene = "nursery"
 spawnin = Vector2(145, 85)
+
+[node name="flower" parent="." instance=ExtResource("3_pwb3c")]
+position = Vector2(79, 131)
+first_texture = ExtResource("4_igrmw")
+second_texture = ExtResource("5_5sttf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flower"]
+position = Vector2(-4, -1)
+shape = SubResource("RectangleShape2D_mkq5t")
+
+[node name="flower4" parent="." instance=ExtResource("3_pwb3c")]
+position = Vector2(17, 131)
+scale = Vector2(-1, 1)
+first_texture = ExtResource("4_igrmw")
+second_texture = ExtResource("5_5sttf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flower4"]
+position = Vector2(-4, -1)
+shape = SubResource("RectangleShape2D_mkq5t")
+
+[node name="flower2" parent="." instance=ExtResource("3_pwb3c")]
+position = Vector2(303, 131)
+first_texture = ExtResource("4_igrmw")
+second_texture = ExtResource("5_5sttf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flower2"]
+position = Vector2(-7, -1)
+shape = SubResource("RectangleShape2D_mkq5t")
+
+[node name="flower3" parent="." instance=ExtResource("3_pwb3c")]
+position = Vector2(241, 131)
+scale = Vector2(-1, 1)
+first_texture = ExtResource("4_igrmw")
+second_texture = ExtResource("5_5sttf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flower3"]
+position = Vector2(-5.5, -1)
+shape = SubResource("RectangleShape2D_mkq5t")
+
+[node name="clock" parent="." instance=ExtResource("3_pwb3c")]
+position = Vector2(192, 71)
+first_texture = ExtResource("6_6g13q")
+second_texture = ExtResource("7_k5ode")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="clock"]
+shape = SubResource("RectangleShape2D_5erj0")

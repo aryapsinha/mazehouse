@@ -1,7 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2x2rdu00bqc0"]
+[gd_scene load_steps=22 format=3 uid="uid://b2x2rdu00bqc0"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_v8w1s"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_vdews"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_8vvom"]
+[ext_resource type="Texture2D" uid="uid://dqdyyts3kf4o2" path="res://assets/interactables/toys/cozyint-toy-bear-og.png" id="4_hscnj"]
+[ext_resource type="Texture2D" uid="uid://b4qmngtdvsy6d" path="res://assets/interactables/toys/yyedit-toy-bear-moved.png" id="5_i6dcr"]
+[ext_resource type="Texture2D" uid="uid://7cb4ymceidyg" path="res://assets/interactables/lamps (cylindrical)/cozyint-lamp-cylinder1-lit.png" id="6_egeww"]
+[ext_resource type="Texture2D" uid="uid://7rmawrlqc78p" path="res://assets/interactables/lamps (cylindrical)/cozyint-lamp-cylinder1-off.png" id="7_6tupy"]
+[ext_resource type="Texture2D" uid="uid://d251of317ctho" path="res://assets/interactables/book-TD/book-close-TD.png" id="8_xwxv4"]
+[ext_resource type="Texture2D" uid="uid://emqnh3g6p1xk" path="res://assets/interactables/book-TD/book-open-TD.png" id="9_lq3ef"]
+[ext_resource type="Texture2D" uid="uid://cat04mfhjuybo" path="res://assets/interactables/double-dresser-TD/double-dresser-TD.png" id="10_rerby"]
+[ext_resource type="Texture2D" uid="uid://dcuxwav53r5wo" path="res://assets/interactables/double-dresser-TD/double-dresser-TD-open.png" id="11_caxdw"]
+[ext_resource type="Texture2D" uid="uid://ne6w7i7jt5mb" path="res://assets/interactables/monitor screens/cozyint-monitor-screen2.png" id="12_i3bs2"]
+[ext_resource type="Texture2D" uid="uid://kd2b2bxcw5ay" path="res://assets/interactables/monitor screens/cozyint-monitor-screen4.png" id="13_wahnx"]
+[ext_resource type="Texture2D" uid="uid://b18wopod6ehhs" path="res://assets/interactables/drawer (short)/topdown-drawer-short-shut.png" id="14_uxdrr"]
+[ext_resource type="Texture2D" uid="uid://bm26wwnc51ob3" path="res://assets/interactables/drawer (short)/topdown-drawer-short-open.png" id="15_r0fc1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ncm2e"]
+size = Vector2(26, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfqf2"]
+size = Vector2(16, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjyoi"]
+size = Vector2(15, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6yqp"]
+size = Vector2(21, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2wwk1"]
+size = Vector2(24, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6wju"]
+size = Vector2(18, 22)
 
 [node name="Cutesy_Room" type="Node2D"]
 
@@ -30,3 +61,64 @@ position = Vector2(224, 194)
 rotation = 1.5708
 dest_scene = "hallway2"
 spawnin = Vector2(352, 97)
+
+[node name="toy" parent="." instance=ExtResource("3_8vvom")]
+position = Vector2(63, 75)
+first_texture = ExtResource("4_hscnj")
+second_texture = ExtResource("5_i6dcr")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toy"]
+position = Vector2(1, 14)
+shape = SubResource("RectangleShape2D_ncm2e")
+
+[node name="lamp" parent="." instance=ExtResource("3_8vvom")]
+position = Vector2(37, 75)
+first_texture = ExtResource("6_egeww")
+second_texture = ExtResource("7_6tupy")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lamp"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_vfqf2")
+
+[node name="book" parent="." instance=ExtResource("3_8vvom")]
+position = Vector2(26, 59)
+first_texture = ExtResource("8_xwxv4")
+second_texture = ExtResource("9_lq3ef")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book"]
+position = Vector2(-6.5, 3.5)
+shape = SubResource("RectangleShape2D_pjyoi")
+
+[node name="cupboard" parent="." instance=ExtResource("3_8vvom")]
+position = Vector2(95, 81)
+first_texture = ExtResource("10_rerby")
+second_texture = ExtResource("11_caxdw")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cupboard"]
+position = Vector2(0.5, 4)
+shape = SubResource("RectangleShape2D_r6yqp")
+
+[node name="monitor-screen" parent="." instance=ExtResource("3_8vvom")]
+position = Vector2(216, 60)
+first_texture = ExtResource("12_i3bs2")
+second_texture = ExtResource("13_wahnx")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="monitor-screen"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_2wwk1")
+
+[node name="dresser-short" parent="." instance=ExtResource("3_8vvom")]
+z_index = 100
+position = Vector2(8, 162)
+first_texture = ExtResource("14_uxdrr")
+second_texture = ExtResource("15_r0fc1")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dresser-short"]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_i6wju")

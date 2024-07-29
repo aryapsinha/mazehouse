@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://df21r6wwvp8r5"]
+[gd_scene load_steps=13 format=3 uid="uid://df21r6wwvp8r5"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_q003i"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_l17dg"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_cwpby"]
+[ext_resource type="Texture2D" uid="uid://b8lk6bfxn3nlv" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD.png" id="4_41hhx"]
+[ext_resource type="Texture2D" uid="uid://b3grtjj1bh6ur" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD-on.png" id="5_v38pw"]
+[ext_resource type="Texture2D" uid="uid://bcgfvgewfp82h" path="res://assets/interactables/curtain (lime)/cozyint-curtains-lime-open.png" id="6_qhln1"]
+[ext_resource type="Texture2D" uid="uid://2uwx6j30qs2d" path="res://assets/interactables/curtain (lime)/cozyint-curtains-lime-drawn.png" id="7_nqjp0"]
+[ext_resource type="Texture2D" uid="uid://c48lvw2susvx" path="res://assets/interactables/plant pot/aseprite-plant-sapling_og.png" id="8_p88dc"]
+[ext_resource type="Texture2D" uid="uid://t7kbiu3rx8q1" path="res://assets/interactables/plant pot/aseprite-plant-grown.png" id="9_43ml4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5tkv"]
+size = Vector2(21, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkh2j"]
+size = Vector2(49, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o4hpb"]
+size = Vector2(18, 24)
 
 [node name="Hallway4" type="Node2D"]
 
@@ -41,3 +57,41 @@ spawnin = Vector2(236, 112)
 position = Vector2(144, 61)
 dest_scene = "masterbedroom"
 spawnin = Vector2(143, 260)
+
+[node name="lamp" parent="." instance=ExtResource("3_cwpby")]
+position = Vector2(167, 71)
+first_texture = ExtResource("4_41hhx")
+second_texture = ExtResource("5_v38pw")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lamp"]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_j5tkv")
+
+[node name="curtain" parent="." instance=ExtResource("3_cwpby")]
+position = Vector2(104, 40)
+first_texture = ExtResource("6_qhln1")
+second_texture = ExtResource("7_nqjp0")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="curtain"]
+position = Vector2(-3, 2)
+shape = SubResource("RectangleShape2D_hkh2j")
+
+[node name="plant" parent="." instance=ExtResource("3_cwpby")]
+position = Vector2(184, 125)
+first_texture = ExtResource("8_p88dc")
+second_texture = ExtResource("9_43ml4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant"]
+position = Vector2(-1, 6)
+shape = SubResource("RectangleShape2D_o4hpb")
+
+[node name="plant2" parent="." instance=ExtResource("3_cwpby")]
+position = Vector2(120, 77)
+first_texture = ExtResource("8_p88dc")
+second_texture = ExtResource("9_43ml4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant2"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_o4hpb")

@@ -19,7 +19,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if has_overlapping_bodies():
 		interactMess()
-		#put haptic here 
+		Input.start_joy_vibration(0, 0.5, 0.5, 0.1)
+		print("vibrate")
 	if interactable:
 		if not toggleable and Input.is_action_pressed("interact"):
 			$Sprite2D.set_texture(second_texture)

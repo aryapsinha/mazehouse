@@ -80,6 +80,12 @@ toggleable = true
 position = Vector2(-4.5, 3.5)
 shape = SubResource("RectangleShape2D_mddl3")
 
+[node name="transport" parent="." instance=ExtResource("2_pdjj7")]
+z_index = 10
+position = Vector2(-9, 159)
+dest_scene = "hallway2"
+spawnin = Vector2(208, 96)
+
 [node name="interactable5" parent="." instance=ExtResource("2_1dxiy")]
 position = Vector2(309, 150)
 first_texture = ExtResource("7_3b0vo")
@@ -89,9 +95,3 @@ toggleable = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactable5"]
 position = Vector2(1, 6.5)
 shape = SubResource("RectangleShape2D_kmvxg")
-
-[node name="transport" parent="." instance=ExtResource("2_pdjj7")]
-position = Vector2(178, 316)
-rotation = 1.5708
-dest_scene = "hallway2"
-spawnin = Vector2(208, 96)

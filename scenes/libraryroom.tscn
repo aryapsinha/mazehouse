@@ -84,6 +84,7 @@ shape = SubResource("RectangleShape2D_mddl3")
 position = Vector2(309, 150)
 first_texture = ExtResource("7_3b0vo")
 second_texture = ExtResource("8_r8e4e")
+toggleable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interactable5"]
 position = Vector2(1, 6.5)

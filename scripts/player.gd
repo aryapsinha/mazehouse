@@ -11,12 +11,6 @@ var messagehide = false
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	velocity = Input.get_vector("left", "right", "up", "down")*SPEED
-	'''
-	if messageshow:
-		$IntMessage.show(); 
-	elif messagehide:
-		$IntMessage.hide()
-	'''
 	move_and_slide()
 
 func interact():

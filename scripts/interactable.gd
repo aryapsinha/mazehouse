@@ -8,36 +8,23 @@ signal normalSprite
 var isFirst = true; 
 @export var toggleable = true; 
 var interactable = false
-
 #@onready var app = $AudioStreamPlayer
-
-
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void: 
 	$Sprite2D.set_texture(first_texture)
 
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	'''
-	
-	else:
-		hideMess()
-	'''
 	if has_overlapping_bodies():
 		interactMess()
+		#put haptic here 
 	if interactable:
-		
-		#Player.message.show()
 		if not toggleable and Input.is_action_pressed("interact"):
 			$Sprite2D.set_texture(second_texture)
 			Player.interact()
-			#interactSprite.emit()
 		if toggleable and Input.is_action_pressed("interact"):
-			#interactSprite.emit()
 			Player.interact()
 			if isFirst:
 				$Sprite2D.set_texture(second_texture)

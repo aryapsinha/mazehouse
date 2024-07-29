@@ -8,25 +8,23 @@ signal normalSprite
 var isFirst = true; 
 @export var toggleable = true; 
 var interactable = false
+#@onready var app = $AudioStreamPlayer
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready() -> void: 
 	$Sprite2D.set_texture(first_texture)
-	#Player.interactSprite.connect(interact)
-	 # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if has_overlapping_bodies():
+		interactMess()
+		#put haptic here 
 	if interactable:
-		#Player.message.show()
 		if not toggleable and Input.is_action_pressed("interact"):
 			$Sprite2D.set_texture(second_texture)
 			Player.interact()
-			#interactSprite.emit()
 		if toggleable and Input.is_action_pressed("interact"):
-			#interactSprite.emit()
 			Player.interact()
 			if isFirst:
 				$Sprite2D.set_texture(second_texture)
@@ -41,27 +39,22 @@ func _process(delta: float) -> void:
 				isFirst = true
 		if not Input.is_action_pressed("interact"):
 			Player.normal()
-	#else:
-		#Player.message.hide() 
-	
-		#normalSprite.emit()
-		
-					
 
+		
+func interactMess():
+	Player.message.show()
+	
+func _on_body_exited(body: Node2D) -> void:
+	print(has_overlapping_bodies())
+	if not has_overlapping_bodies():
+		Player.message.hide() 
+	if has_overlapping_bodies():
+		Player.message.show() 
+	print("hide message")
+	interactable = false# Replace with function body.
 
 func _on_body_entered(body: Node2D) -> void:
 	Player.message.show()
+	print("show message")
 	#insert glow texture here 
 	interactable = true
-	 # Replace with function body.
-		
-
-#func _on_Sprite_texture_changed():
-	#if $Sprite2D.texture != get_parent().first_texture:
-		#await get_tree().create_timer(3).timeout
-		#$Sprite2D.set_texture(first_texture)
-
-
-func _on_body_exited(body: Node2D) -> void:
-	Player.message.hide() 
-	interactable = false# Replace with function body.

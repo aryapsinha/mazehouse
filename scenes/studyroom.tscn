@@ -25,7 +25,7 @@ layer_6/name = "Deco 4"
 layer_6/tile_data = PackedInt32Array(655361, 2, 65552, 720897, 2, 65553)
 
 [node name="transport" parent="." instance=ExtResource("2_nnt0y")]
-position = Vector2(255, 376)
+position = Vector2(256, 375)
 rotation = 1.5708
 dest_scene = "indoorgarden"
 spawnin = Vector2(14, 145)

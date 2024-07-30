@@ -1,6 +1,10 @@
+
 [gd_scene load_steps=19 format=3 uid="uid://d1d4ra1rn37ei"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_syew5"]
+
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_gh021"]
+[ext_resource type="Script" path="res://scripts/mtile.gd" id="1_hcu7d"]
+
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_146pa"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="2_icy4t"]
 [ext_resource type="Texture2D" uid="uid://becwc2ylc86r1" path="res://assets/interactables/curtains (blue blinds)/cozyint-curtain-blue-drawn.png" id="4_57gkt"]
@@ -30,6 +34,7 @@ size = Vector2(32, 34)
 size = Vector2(20, 41)
 
 [node name="laundryroom" type="Node2D"]
+script = ExtResource("1_hcu7d")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-1, 0)
@@ -49,7 +54,7 @@ visible = false
 position = Vector2(167, 126)
 
 [node name="transport" parent="." instance=ExtResource("2_146pa")]
-position = Vector2(-15, 112)
+position = Vector2(-22, 112)
 dest_scene = "kitchen"
 spawnin = Vector2(14, 128)
 

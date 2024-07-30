@@ -5,6 +5,7 @@
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 10
+texture_filter = 1
 position = Vector2(49, 124)
 scale = Vector2(1.5, 1.5)
 collision_mask = 6
@@ -22,6 +23,7 @@ polygon = PackedVector2Array(5.33334, 7.33333, 4, 7.33333, 4, 8, -4, 8, -4, 7.33
 
 [node name="IntMessage" type="ColorRect" parent="."]
 visible = false
+z_index = 200
 offset_left = -55.3333
 offset_top = 20.0
 offset_right = -13.3333

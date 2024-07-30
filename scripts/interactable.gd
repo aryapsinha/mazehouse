@@ -19,23 +19,24 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if has_overlapping_bodies():
 		interactMess()
-		Input.start_joy_vibration(0, 0.5, 0.5, 0.1)
-		print("vibrate")
+		#print("vibrate")
 	if interactable:
 		if not toggleable and Input.is_action_pressed("interact"):
 			$Sprite2D.set_texture(second_texture)
 			Player.interact()
+			Input.start_joy_vibration(0, 0.5, 0.5, 0.4)
 		if toggleable and Input.is_action_pressed("interact"):
 			Player.interact()
+			Input.start_joy_vibration(0, 0.5, 0.5, 0.4)
 			if isFirst:
 				$Sprite2D.set_texture(second_texture)
-				print("togglefirst")
+				#print("togglefirst")
 				await get_tree().create_timer(0.2).timeout
 				isFirst = false
 				
 			elif not isFirst:
 				$Sprite2D.set_texture(first_texture)
-				print("togglesecond")
+				#print("togglesecond")
 				await get_tree().create_timer(0.2).timeout
 				isFirst = true
 		if not Input.is_action_pressed("interact"):

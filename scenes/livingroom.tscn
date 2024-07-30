@@ -1,11 +1,7 @@
-
-[gd_scene load_steps=25 format=3 uid="uid://bfwt6s3wfs6qt"]
-
-
+[gd_scene load_steps=26 format=3 uid="uid://bfwt6s3wfs6qt"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_0jkxh"]
 [ext_resource type="Script" path="res://scripts/mtile.gd" id="1_gv1u1"]
-
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="1_jeivo"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_r8e5o"]
 [ext_resource type="Texture2D" uid="uid://12n77l7hlocw" path="res://assets/interactables/aseprite-orangesofa-front-pillow-og.png" id="4_14itd"]
@@ -87,7 +83,6 @@ toggleable = true
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_efmo3")
 
-
 [node name="television-screen" parent="." instance=ExtResource("3_r8e5o")]
 position = Vector2(58, 46)
 first_texture = ExtResource("6_j7tvg")
@@ -146,9 +141,8 @@ toggleable = true
 position = Vector2(0, 14)
 shape = SubResource("RectangleShape2D_5h762")
 
-[node name="transport" parent="." instance=ExtResource("1_jeivo")]
+[node name="transport3" parent="." instance=ExtResource("1_jeivo")]
 position = Vector2(-46, 43)
 rotation = 1.5708
 dest_scene = "hallway1"
 spawnin = Vector2(160, 137)
-

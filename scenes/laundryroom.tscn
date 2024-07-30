@@ -1,10 +1,7 @@
+[gd_scene load_steps=20 format=3 uid="uid://d1d4ra1rn37ei"]
 
-[gd_scene load_steps=19 format=3 uid="uid://d1d4ra1rn37ei"]
-
-
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_gh021"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_gh021"]
 [ext_resource type="Script" path="res://scripts/mtile.gd" id="1_hcu7d"]
-
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_146pa"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="2_icy4t"]
 [ext_resource type="Texture2D" uid="uid://becwc2ylc86r1" path="res://assets/interactables/curtains (blue blinds)/cozyint-curtain-blue-drawn.png" id="4_57gkt"]

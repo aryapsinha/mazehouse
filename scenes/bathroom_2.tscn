@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bq5xeslolripi"]
+[gd_scene load_steps=4 format=3 uid="uid://bq5xeslolripi"]
 
+[ext_resource type="Script" path="res://scripts/yytile.gd" id="1_gumte"]
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_sjpqm"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_wosck"]
 
 [node name="bathroom2" type="Node2D"]
+script = ExtResource("1_gumte")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(5, 5)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://b2x2rdu00bqc0"]
+[gd_scene load_steps=23 format=3 uid="uid://b2x2rdu00bqc0"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_dahwr"]
+[ext_resource type="Script" path="res://scripts/mtile.gd" id="1_rt4ek"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_vdews"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_8vvom"]
 [ext_resource type="Texture2D" uid="uid://dqdyyts3kf4o2" path="res://assets/interactables/toys/cozyint-toy-bear-og.png" id="4_hscnj"]
@@ -35,6 +36,7 @@ size = Vector2(24, 26)
 size = Vector2(18, 22)
 
 [node name="Cutesy_Room" type="Node2D"]
+script = ExtResource("1_rt4ek")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_dahwr")
@@ -57,7 +59,7 @@ layer_6/z_index = 15
 layer_6/tile_data = PackedInt32Array(655360, 262146, 65537, 589824, 262146, 0, 655376, 262165, 268500997, 655375, 524309, 65541, 589840, 262165, 268435460)
 
 [node name="transport2" parent="." instance=ExtResource("2_vdews")]
-position = Vector2(224, 194)
+position = Vector2(224, 205)
 rotation = 1.5708
 dest_scene = "hallway2"
 spawnin = Vector2(352, 97)

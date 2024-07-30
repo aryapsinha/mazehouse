@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ch8ycvj6aictp"]
+[gd_scene load_steps=4 format=3 uid="uid://ch8ycvj6aictp"]
 
+[ext_resource type="Script" path="res://scripts/yytile.gd" id="1_ds304"]
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_rqure"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_wfmvh"]
 
 [node name="start-room" type="Node2D"]
+script = ExtResource("1_ds304")
 metadata/_edit_horizontal_guides_ = [930.673, 680.0]
 
 [node name="TileMap" type="TileMap" parent="."]

@@ -82,7 +82,8 @@ shape = SubResource("RectangleShape2D_mddl3")
 
 [node name="transport" parent="." instance=ExtResource("2_pdjj7")]
 z_index = 10
-position = Vector2(-9, 159)
+position = Vector2(176, 311)
+rotation = 1.5708
 dest_scene = "hallway2"
 spawnin = Vector2(208, 96)
 

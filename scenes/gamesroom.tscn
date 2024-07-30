@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c66ticlha5f7a"]
+[gd_scene load_steps=4 format=3 uid="uid://c66ticlha5f7a"]
 
+[ext_resource type="Script" path="res://scripts/yytile.gd" id="1_1jbpl"]
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_64wuy"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_h5t7j"]
 
 [node name="gamesroom" type="Node2D"]
+script = ExtResource("1_1jbpl")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_64wuy")
@@ -32,6 +34,6 @@ dest_scene = "hallway2"
 spawnin = Vector2(208, 138)
 
 [node name="transport3" parent="." instance=ExtResource("2_h5t7j")]
-position = Vector2(-12, 96)
+position = Vector2(-30, 95)
 dest_scene = "indoorgarden"
 spawnin = Vector2(442, 159)

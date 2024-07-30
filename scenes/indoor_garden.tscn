@@ -1,7 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmwleib7n5igm"]
+[gd_scene load_steps=22 format=3 uid="uid://bmwleib7n5igm"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_uw4ti"]
+
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_6w5lw"]
+
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_yaogy"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_ovpsv"]
+[ext_resource type="Texture2D" uid="uid://dv4m8wmi66cjw" path="res://assets/interactables/curtains (green)/cozyint-curtains-green-open.png" id="4_kqvpc"]
+[ext_resource type="Texture2D" uid="uid://cd81glbwl1ues" path="res://assets/interactables/curtains (green)/cozyint-curtains-green-drawn.png" id="5_wha1d"]
+[ext_resource type="Texture2D" uid="uid://c48lvw2susvx" path="res://assets/interactables/plant pot/aseprite-plant-sapling_og.png" id="6_3rf8b"]
+[ext_resource type="Texture2D" uid="uid://t7kbiu3rx8q1" path="res://assets/interactables/plant pot/aseprite-plant-grown.png" id="7_0hkwp"]
+[ext_resource type="Texture2D" uid="uid://c10mgu6hbfnms" path="res://assets/interactables/flower vase/aseprite-flowervase-upright-og.png" id="8_hacas"]
+[ext_resource type="Texture2D" uid="uid://pbl2i5eige5i" path="res://assets/interactables/flower vase/aseprite-flowervase-toppled.png" id="9_jskls"]
+[ext_resource type="Texture2D" uid="uid://c1edjsg4dhjg3" path="res://assets/interactables/kitchen-sink-TD/kitchen-sink-TD.png" id="10_upj0s"]
+[ext_resource type="Texture2D" uid="uid://by58kbhog2mrd" path="res://assets/interactables/kitchen-sink-TD/kitchen-sink-TD-on.png" id="11_pln5i"]
+[ext_resource type="Texture2D" uid="uid://vjguc1hmr5eq" path="res://assets/interactables/flower (pink)/cozyint-flower-pink-og.png" id="12_klf5q"]
+[ext_resource type="Texture2D" uid="uid://clml281111mgi" path="res://assets/interactables/flower (pink)/cozyint-flower-pink-grown.png" id="13_gscda"]
+[ext_resource type="Texture2D" uid="uid://c3iw3fvqy5co" path="res://assets/interactables/gnome (green)/cozyint-gnome-green-og.png" id="14_7ia70"]
+[ext_resource type="Texture2D" uid="uid://dc3467rtm0413" path="res://assets/interactables/gnome (green)/cozyint-gnome-green-fell.png" id="15_axnan"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_alnwo"]
+size = Vector2(49, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qsqu0"]
+size = Vector2(17, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6wwf"]
+size = Vector2(17, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbflh"]
+size = Vector2(24, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlo3g"]
+size = Vector2(24, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmqxg"]
+size = Vector2(24, 23)
 
 [node name="IndoorGarden" type="Node2D"]
 
@@ -42,3 +75,92 @@ position = Vector2(386, 245)
 rotation = 1.5708
 dest_scene = "hallway3"
 spawnin = Vector2(273, 97)
+
+[node name="curtain" parent="." instance=ExtResource("3_ovpsv")]
+position = Vector2(56, 40)
+first_texture = ExtResource("4_kqvpc")
+second_texture = ExtResource("5_wha1d")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="curtain"]
+position = Vector2(0.5, 8)
+shape = SubResource("RectangleShape2D_alnwo")
+
+[node name="curtain2" parent="." instance=ExtResource("3_ovpsv")]
+position = Vector2(120, 40)
+first_texture = ExtResource("4_kqvpc")
+second_texture = ExtResource("5_wha1d")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="curtain2"]
+position = Vector2(0.5, 8)
+shape = SubResource("RectangleShape2D_alnwo")
+
+[node name="curtain3" parent="." instance=ExtResource("3_ovpsv")]
+position = Vector2(184, 40)
+first_texture = ExtResource("4_kqvpc")
+second_texture = ExtResource("5_wha1d")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="curtain3"]
+position = Vector2(0.5, 8)
+shape = SubResource("RectangleShape2D_alnwo")
+
+[node name="plant-type1-1" parent="." instance=ExtResource("3_ovpsv")]
+position = Vector2(216, 93)
+first_texture = ExtResource("6_3rf8b")
+second_texture = ExtResource("7_0hkwp")
+toggleable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant-type1-1"]
+position = Vector2(-1.5, 6)
+shape = SubResource("RectangleShape2D_qsqu0")
+
+[node name="plant-type1-2" parent="." instance=ExtResource("3_ovpsv")]
+position = Vector2(312, 205)
+first_texture = ExtResource("6_3rf8b")
+second_texture = ExtResource("7_0hkwp")
+toggleable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant-type1-2"]
+position = Vector2(1.5, 5.5)
+shape = SubResource("RectangleShape2D_qsqu0")
+
+[node name="plant-type2-1" parent="." instance=ExtResource("3_ovpsv")]
+position = Vector2(47, 83)
+first_texture = ExtResource("8_hacas")
+second_texture = ExtResource("9_jskls")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plant-type2-1"]
+position = Vector2(-5.5, 0.5)
+shape = SubResource("RectangleShape2D_w6wwf")
+
+[node name="sink" parent="." instance=ExtResource("3_ovpsv")]
+position = Vector2(401, 57)
+first_texture = ExtResource("10_upj0s")
+second_texture = ExtResource("11_pln5i")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sink"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_wbflh")
+
+[node name="flower-pink" parent="." instance=ExtResource("3_ovpsv")]
+position = Vector2(87, 181)
+first_texture = ExtResource("12_klf5q")
+second_texture = ExtResource("13_gscda")
+toggleable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="flower-pink"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_hlo3g")
+
+[node name="gnome-green" parent="." instance=ExtResource("3_ovpsv")]
+position = Vector2(151, 137)
+first_texture = ExtResource("14_7ia70")
+second_texture = ExtResource("15_axnan")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gnome-green"]
+position = Vector2(-2, -1.5)
+shape = SubResource("RectangleShape2D_fmqxg")

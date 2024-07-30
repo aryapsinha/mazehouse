@@ -1,14 +1,47 @@
-[gd_scene load_steps=8 format=3 uid="uid://bfwt6s3wfs6qt"]
+
+[gd_scene load_steps=25 format=3 uid="uid://bfwt6s3wfs6qt"]
+
+
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_0jkxh"]
 [ext_resource type="Script" path="res://scripts/mtile.gd" id="1_gv1u1"]
+
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="1_jeivo"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_r8e5o"]
 [ext_resource type="Texture2D" uid="uid://12n77l7hlocw" path="res://assets/interactables/aseprite-orangesofa-front-pillow-og.png" id="4_14itd"]
 [ext_resource type="Texture2D" uid="uid://buhxhxj5kknmq" path="res://assets/interactables/aseprite-orangesofa-front-pillow1.png" id="5_d6qgh"]
+[ext_resource type="Texture2D" uid="uid://ckl1bdrb85wso" path="res://assets/interactables/television flat screens/cozyint-television-screen1.png" id="6_j7tvg"]
+[ext_resource type="Texture2D" uid="uid://cnwwlhbar8quc" path="res://assets/interactables/television flat screens/cozyint-television-screen2.png" id="7_f5u2m"]
+[ext_resource type="Texture2D" uid="uid://c5ry5846jjdsu" path="res://assets/interactables/clothes-stand-TD/clothes-stand-empty-TD.png" id="8_wrfoi"]
+[ext_resource type="Texture2D" uid="uid://mvhoxbymmkr1" path="res://assets/interactables/clothes-stand-TD/clothes-stand-filled-TD.png" id="9_ihmhb"]
+[ext_resource type="Texture2D" uid="uid://b8lk6bfxn3nlv" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD.png" id="10_iwl0y"]
+[ext_resource type="Texture2D" uid="uid://b3grtjj1bh6ur" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD-on.png" id="11_bjhf0"]
+[ext_resource type="Texture2D" uid="uid://d251of317ctho" path="res://assets/interactables/book-TD/book-close-TD.png" id="12_04cya"]
+[ext_resource type="Texture2D" uid="uid://emqnh3g6p1xk" path="res://assets/interactables/book-TD/book-open-TD.png" id="13_mxdvx"]
+[ext_resource type="Texture2D" uid="uid://eaibis2er8ey" path="res://assets/interactables/coffee-cup-TD/coffee-cup-TD-full.png" id="14_jy58y"]
+[ext_resource type="Texture2D" uid="uid://bij4lw4ce44lj" path="res://assets/interactables/coffee-cup-TD/coffee-cup-TD.png" id="15_t5gyc"]
+[ext_resource type="Texture2D" uid="uid://d0kypvppinexu" path="res://assets/interactables/fireplace-TD/fireplace-TD.png" id="16_06ugt"]
+[ext_resource type="Texture2D" uid="uid://ca4rfnve31cwh" path="res://assets/interactables/fireplace-TD/fireplace-TD-on.png" id="17_1e3nx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efmo3"]
 size = Vector2(51, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7it7"]
+size = Vector2(27, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6qi3o"]
+size = Vector2(14, 47)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6830"]
+size = Vector2(20, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r44vy"]
+size = Vector2(26, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sivh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h762"]
+size = Vector2(28, 30)
 
 [node name="livingroom" type="Node2D"]
 position = Vector2(5, 31)
@@ -39,19 +72,83 @@ position = Vector2(321, 159)
 dest_scene = "hallway2"
 spawnin = Vector2(32, 111)
 
-[node name="interactable" parent="." instance=ExtResource("3_r8e5o")]
+[node name="transport" parent="." instance=ExtResource("1_jeivo")]
+position = Vector2(-18, 79)
+dest_scene = "hallway1"
+spawnin = Vector2(160, 137)
+
+[node name="sofa" parent="." instance=ExtResource("3_r8e5o")]
 position = Vector2(202, 105)
 first_texture = ExtResource("4_14itd")
 second_texture = ExtResource("5_d6qgh")
 toggleable = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable"]
-visible = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sofa"]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_efmo3")
+
+
+[node name="television-screen" parent="." instance=ExtResource("3_r8e5o")]
+position = Vector2(58, 46)
+first_texture = ExtResource("6_j7tvg")
+second_texture = ExtResource("7_f5u2m")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="television-screen"]
+position = Vector2(-0.5, 6)
+shape = SubResource("RectangleShape2D_y7it7")
+
+[node name="clothes-stand" parent="." instance=ExtResource("3_r8e5o")]
+position = Vector2(9, 58)
+first_texture = ExtResource("8_wrfoi")
+second_texture = ExtResource("9_ihmhb")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="clothes-stand"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_6qi3o")
+
+[node name="lamp" parent="." instance=ExtResource("3_r8e5o")]
+position = Vector2(281, 120)
+first_texture = ExtResource("10_iwl0y")
+second_texture = ExtResource("11_bjhf0")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lamp"]
+position = Vector2(-2, 6)
+shape = SubResource("RectangleShape2D_s6830")
+
+[node name="book" parent="." instance=ExtResource("3_r8e5o")]
+position = Vector2(123, 42)
+first_texture = ExtResource("12_04cya")
+second_texture = ExtResource("13_mxdvx")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book"]
+position = Vector2(-3, 11)
+shape = SubResource("RectangleShape2D_r44vy")
+
+[node name="cup" parent="." instance=ExtResource("3_r8e5o")]
+position = Vector2(89, 92)
+first_texture = ExtResource("14_jy58y")
+second_texture = ExtResource("15_t5gyc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cup"]
+shape = SubResource("RectangleShape2D_1sivh")
+
+[node name="fireplace" parent="." instance=ExtResource("3_r8e5o")]
+position = Vector2(241, 53)
+first_texture = ExtResource("16_06ugt")
+second_texture = ExtResource("17_1e3nx")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fireplace"]
+position = Vector2(0, 14)
+shape = SubResource("RectangleShape2D_5h762")
 
 [node name="transport" parent="." instance=ExtResource("1_jeivo")]
 position = Vector2(-46, 43)
 rotation = 1.5708
 dest_scene = "hallway1"
 spawnin = Vector2(160, 137)
+

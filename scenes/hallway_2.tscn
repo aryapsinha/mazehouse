@@ -80,7 +80,8 @@ dest_scene = "bathroom2"
 spawnin = Vector2(13, 85)
 
 [node name="cup" parent="." instance=ExtResource("3_4ex1a")]
-position = Vector2(185, 130)
+z_index = 100
+position = Vector2(184, 130)
 first_texture = ExtResource("8_yg30m")
 second_texture = ExtResource("9_d3ek8")
 
@@ -118,6 +119,7 @@ toggleable = true
 shape = SubResource("RectangleShape2D_18im0")
 
 [node name="plant" parent="." instance=ExtResource("3_4ex1a")]
+z_index = 100
 position = Vector2(8, 125)
 first_texture = ExtResource("10_si8wu")
 second_texture = ExtResource("11_fqq0i")
@@ -127,6 +129,7 @@ position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_81v1r")
 
 [node name="plant2" parent="." instance=ExtResource("3_4ex1a")]
+z_index = 100
 position = Vector2(376, 125)
 first_texture = ExtResource("10_si8wu")
 second_texture = ExtResource("11_fqq0i")

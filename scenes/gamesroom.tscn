@@ -1,8 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://c66ticlha5f7a"]
+
+[gd_scene load_steps=19 format=3 uid="uid://c66ticlha5f7a"]
+
 
 [ext_resource type="Script" path="res://scripts/yytile.gd" id="1_1jbpl"]
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_64wuy"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_h5t7j"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_q15su"]
+[ext_resource type="Texture2D" uid="uid://pleooh31oefk" path="res://assets/interactables/television bigger flat screens/television-flat-bigger-screen1.png" id="4_46e5o"]
+[ext_resource type="Texture2D" uid="uid://d01ejltnd2nw5" path="res://assets/interactables/television bigger flat screens/television-flat-bigger-screen2.png" id="5_hupsi"]
+[ext_resource type="Texture2D" uid="uid://c0khuikqaxbg5" path="res://assets/pooltable-still-yycreation.png" id="6_7gdav"]
+[ext_resource type="Texture2D" uid="uid://cbjquipe2be0d" path="res://assets/pooltable-played-yycreation.png" id="7_uh6ur"]
+[ext_resource type="Texture2D" uid="uid://rxawl7q2efca" path="res://assets/interactables/board game/yycreations-monopoly-unplayed.png" id="8_v7p1b"]
+[ext_resource type="Texture2D" uid="uid://c7vyd805l48k1" path="res://assets/interactables/board game/yycreations-monopoly-played.png" id="9_f438e"]
+[ext_resource type="Texture2D" uid="uid://c3fd1l6thlegm" path="res://assets/interactables/card game/yycreations-cardgame-unplayed.png" id="10_utkcf"]
+[ext_resource type="Texture2D" uid="uid://cov8ssig7mea" path="res://assets/interactables/card game/yycreations-cardgame-played .png" id="11_on6qq"]
+[ext_resource type="Texture2D" uid="uid://b4i84ics4m8l7" path="res://assets/interactables/lamps (bent)/cozyint-lamp-bent4-off.png" id="12_ctu2w"]
+[ext_resource type="Texture2D" uid="uid://c8grh0bnlkul3" path="res://assets/interactables/lamps (bent)/cozyint-lamp-bent4-lit.png" id="13_a3lw3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0soks"]
+size = Vector2(50, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2qmyf"]
+size = Vector2(70, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmr8p"]
+size = Vector2(19, 16.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yy8ca"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdjk3"]
+size = Vector2(28, 24)
 
 [node name="gamesroom" type="Node2D"]
 script = ExtResource("1_1jbpl")
@@ -37,3 +64,54 @@ spawnin = Vector2(208, 138)
 position = Vector2(-30, 95)
 dest_scene = "indoorgarden"
 spawnin = Vector2(442, 159)
+
+[node name="tv-screen" parent="." instance=ExtResource("3_q15su")]
+position = Vector2(162, 44)
+first_texture = ExtResource("4_46e5o")
+second_texture = ExtResource("5_hupsi")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tv-screen"]
+position = Vector2(0, 10.5)
+shape = SubResource("RectangleShape2D_0soks")
+
+[node name="pool-table" parent="." instance=ExtResource("3_q15su")]
+position = Vector2(160, 136)
+first_texture = ExtResource("6_7gdav")
+second_texture = ExtResource("7_uh6ur")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pool-table"]
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_2qmyf")
+
+[node name="board-game" parent="." instance=ExtResource("3_q15su")]
+position = Vector2(82, 249)
+first_texture = ExtResource("8_v7p1b")
+second_texture = ExtResource("9_f438e")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="board-game"]
+position = Vector2(-7.5, -0.25)
+shape = SubResource("RectangleShape2D_fmr8p")
+
+[node name="card-game" parent="." instance=ExtResource("3_q15su")]
+position = Vector2(40, 209)
+first_texture = ExtResource("10_utkcf")
+second_texture = ExtResource("11_on6qq")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="card-game"]
+position = Vector2(-1, -6)
+shape = SubResource("RectangleShape2D_yy8ca")
+
+[node name="light" parent="." instance=ExtResource("3_q15su")]
+position = Vector2(95, 179)
+scale = Vector2(-1, 1)
+first_texture = ExtResource("12_ctu2w")
+second_texture = ExtResource("13_a3lw3")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="light"]
+position = Vector2(4, 2)
+shape = SubResource("RectangleShape2D_sdjk3")

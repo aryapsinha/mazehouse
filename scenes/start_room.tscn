@@ -1,9 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://ch8ycvj6aictp"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_4ikjq"]
+
+[gd_scene load_steps=14 format=3 uid="uid://ch8ycvj6aictp"]
+
+
+
+[ext_resource type="Script" path="res://scripts/yytile.gd" id="1_ds304"]
+
+
+
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_wfmvh"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_wnk1i"]
+[ext_resource type="Texture2D" uid="uid://d0kypvppinexu" path="res://assets/interactables/fireplace-TD/fireplace-TD.png" id="4_w7j8v"]
+[ext_resource type="Texture2D" uid="uid://ca4rfnve31cwh" path="res://assets/interactables/fireplace-TD/fireplace-TD-on.png" id="5_htqvp"]
+[ext_resource type="Texture2D" uid="uid://b8lk6bfxn3nlv" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD.png" id="6_nqtd2"]
+[ext_resource type="Texture2D" uid="uid://b3grtjj1bh6ur" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD-on.png" id="7_q67nr"]
+[ext_resource type="Texture2D" uid="uid://cgvbff7ho8cpy" path="res://assets/interactables/lamps (conical)/cozyint-lamp-cone3-lit.png" id="8_0et5m"]
+[ext_resource type="Texture2D" uid="uid://ve7d2tv2nqig" path="res://assets/interactables/lamps (conical)/cozyint-lamp-cone3-off.png" id="9_73xgo"]
+[ext_resource type="Texture2D" uid="uid://7xa1jqpragu" path="res://assets/interactables/short-lamp-TD/short-lamp-TD.png" id="10_5vvjm"]
+[ext_resource type="Texture2D" uid="uid://clqr48xeq81m4" path="res://assets/interactables/short-lamp-TD/short-lamp-TD-on.png" id="11_8ejx6"]
+[ext_resource type="Texture2D" uid="uid://d251of317ctho" path="res://assets/interactables/book-TD/book-close-TD.png" id="12_dcukf"]
+[ext_resource type="Texture2D" uid="uid://emqnh3g6p1xk" path="res://assets/interactables/book-TD/book-open-TD.png" id="13_n5i1q"]
 
 [node name="start-room" type="Node2D"]
+script = ExtResource("1_ds304")
 metadata/_edit_horizontal_guides_ = [930.673, 680.0]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -39,3 +58,28 @@ spawnin = Vector2(222, 90)
 position = Vector2(269, 112)
 dest_scene = "guestbedroom"
 spawnin = Vector2(-22, 111)
+
+[node name="fireplace" parent="." instance=ExtResource("3_wnk1i")]
+first_texture = ExtResource("4_w7j8v")
+second_texture = ExtResource("5_htqvp")
+toggleable = true
+
+[node name="standing-lamp" parent="." instance=ExtResource("3_wnk1i")]
+first_texture = ExtResource("6_nqtd2")
+second_texture = ExtResource("7_q67nr")
+toggleable = true
+
+[node name="standing-lamp-short" parent="." instance=ExtResource("3_wnk1i")]
+first_texture = ExtResource("8_0et5m")
+second_texture = ExtResource("9_73xgo")
+toggleable = true
+
+[node name="table-lamp" parent="." instance=ExtResource("3_wnk1i")]
+first_texture = ExtResource("10_5vvjm")
+second_texture = ExtResource("11_8ejx6")
+toggleable = true
+
+[node name="book" parent="." instance=ExtResource("3_wnk1i")]
+first_texture = ExtResource("12_dcukf")
+second_texture = ExtResource("13_n5i1q")
+toggleable = true

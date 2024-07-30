@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://bq5xeslolripi"]
+[gd_scene load_steps=13 format=3 uid="uid://bq5xeslolripi"]
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_sjpqm"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_wosck"]
+[ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_5im7c"]
+[ext_resource type="Texture2D" uid="uid://bm77gt6581ltx" path="res://assets/interactables/toilet-TD/td-toilet-empty.png" id="4_p20e6"]
+[ext_resource type="Texture2D" uid="uid://dgkxc1uujvnls" path="res://assets/interactables/toilet-TD/td-toilet-full.png" id="5_o4c5e"]
+[ext_resource type="Texture2D" uid="uid://bdtyc2uhg80sx" path="res://assets/interactables/sink-TD/sink-TD.png" id="6_m64ie"]
+[ext_resource type="Texture2D" uid="uid://cje7kodgirrl5" path="res://assets/interactables/sink-TD/sink-TD-on.png" id="7_ekb70"]
+[ext_resource type="Texture2D" uid="uid://d1flkttu747iv" path="res://assets/interactables/bath-TD/bath-TD.png" id="8_wxoh3"]
+[ext_resource type="Texture2D" uid="uid://rxymnnjw4ey8" path="res://assets/interactables/bath-TD/bath-TD-full.png" id="9_xlhod"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q747c"]
+size = Vector2(28, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fddw5"]
+size = Vector2(22, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qq40n"]
+size = Vector2(40, 28)
 
 [node name="bathroom2" type="Node2D"]
 
@@ -31,3 +47,34 @@ layer_6/tile_data = PackedInt32Array(327687, 6, 65537)
 position = Vector2(-13, 85)
 dest_scene = "hallway2"
 spawnin = Vector2(350, 137)
+
+[node name="toilet" parent="." instance=ExtResource("3_5im7c")]
+position = Vector2(29, 49)
+first_texture = ExtResource("4_p20e6")
+second_texture = ExtResource("5_o4c5e")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="toilet"]
+position = Vector2(-1, 4)
+shape = SubResource("RectangleShape2D_q747c")
+
+[node name="sink" parent="." instance=ExtResource("3_5im7c")]
+position = Vector2(65, 43)
+first_texture = ExtResource("6_m64ie")
+second_texture = ExtResource("7_ekb70")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sink"]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_fddw5")
+
+[node name="bath" parent="." instance=ExtResource("3_5im7c")]
+position = Vector2(111, 56)
+scale = Vector2(-1, 1)
+first_texture = ExtResource("8_wxoh3")
+second_texture = ExtResource("9_xlhod")
+toggleable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bath"]
+position = Vector2(1, 4)
+shape = SubResource("RectangleShape2D_qq40n")

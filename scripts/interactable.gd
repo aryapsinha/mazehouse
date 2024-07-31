@@ -17,14 +17,19 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if has_overlapping_bodies():
+	if toggleable and has_overlapping_bodies():
 		interactMess()
+	#if isFirst and not toggleable and has_overlapping_bodies():
+		#interactMess()
 		#print("vibrate")
+	
+	#***need to make message disappear after interacting with nontoggleable
 	if interactable:
 		if not toggleable and Input.is_action_pressed("interact"):
 			$Sprite2D.set_texture(second_texture)
 			Player.interact()
 			Input.start_joy_vibration(0, 0.5, 0.5, 0.4)
+			isFirst = false 
 		if toggleable and Input.is_action_pressed("interact"):
 			Player.interact()
 			Input.start_joy_vibration(0, 0.5, 0.5, 0.4)
@@ -47,16 +52,19 @@ func interactMess():
 	Player.message.show()
 	
 func _on_body_exited(body: Node2D) -> void:
-	print(has_overlapping_bodies())
-	if not has_overlapping_bodies():
-		Player.message.hide() 
-	if has_overlapping_bodies():
-		Player.message.show() 
-	print("hide message")
-	interactable = false# Replace with function body.
+	 
+		print(has_overlapping_bodies())
+		if not has_overlapping_bodies():
+			Player.message.hide() 
+		if toggleable or isFirst:
+			if has_overlapping_bodies():
+				Player.message.show() 
+			print("hide message")
+			interactable = false# Replace with function body.
 
 func _on_body_entered(body: Node2D) -> void:
-	Player.message.show()
-	print("show message")
-	#insert glow texture here 
-	interactable = true
+	if toggleable or  isFirst: 
+		Player.message.show()
+		print("show message")
+		#insert glow texture here 
+		interactable = true

@@ -28,11 +28,11 @@ func _process(delta: float) -> void:
 		if not toggleable and Input.is_action_pressed("interact"):
 			$Sprite2D.set_texture(second_texture)
 			Player.interact()
-			Input.start_joy_vibration(0, 0.5, 0.5, 0.4)
+			Input.start_joy_vibration(0, 0.5, 0.5, 0.1)
 			isFirst = false 
 		if toggleable and Input.is_action_pressed("interact"):
 			Player.interact()
-			Input.start_joy_vibration(0, 0.5, 0.5, 0.4)
+			Input.start_joy_vibration(0, 0.5, 0.5, 0.1)
 			if isFirst:
 				$Sprite2D.set_texture(second_texture)
 				#print("togglefirst")

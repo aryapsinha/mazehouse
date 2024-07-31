@@ -1,9 +1,8 @@
 [gd_scene load_steps=24 format=3 uid="uid://tdey0ckls6w1"]
 
 [ext_resource type="Script" path="res://scripts/mtile.gd" id="1_j56f5"]
-
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_j471h"]
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="2_o0fhb"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="2_o0fhb"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_3qvhg"]
 [ext_resource type="Texture2D" uid="uid://b8lk6bfxn3nlv" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD.png" id="4_l2pnq"]
 [ext_resource type="Texture2D" uid="uid://b3grtjj1bh6ur" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD-on.png" id="5_rajlc"]

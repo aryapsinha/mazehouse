@@ -1,4 +1,7 @@
 
+
+[ext_resource type="Script" path="res://scripts/mtile.gd" id="1_ineig"]
+
 [gd_scene load_steps=26 format=3 uid="uid://ch8ycvj6aictp"]
 
 
@@ -10,7 +13,6 @@
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_4ikjq"]
 
 
-[ext_resource type="Script" path="res://scripts/yytile.gd" id="1_ds304"]
 
 
 
@@ -54,7 +56,7 @@ size = Vector2(20, 21)
 size = Vector2(34, 21)
 
 [node name="start-room" type="Node2D"]
-script = ExtResource("1_ds304")
+script = ExtResource("1_ineig")
 metadata/_edit_horizontal_guides_ = [930.673, 680.0]
 
 [node name="TileMap" type="TileMap" parent="."]

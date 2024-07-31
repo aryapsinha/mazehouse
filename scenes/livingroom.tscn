@@ -69,7 +69,8 @@ dest_scene = "hallway2"
 spawnin = Vector2(32, 111)
 
 [node name="transport" parent="." instance=ExtResource("1_jeivo")]
-position = Vector2(-18, 79)
+position = Vector2(-48, 50)
+rotation = 1.5708
 dest_scene = "hallway1"
 spawnin = Vector2(160, 137)
 
@@ -140,9 +141,3 @@ toggleable = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fireplace"]
 position = Vector2(0, 14)
 shape = SubResource("RectangleShape2D_5h762")
-
-[node name="transport3" parent="." instance=ExtResource("1_jeivo")]
-position = Vector2(-46, 43)
-rotation = 1.5708
-dest_scene = "hallway1"
-spawnin = Vector2(160, 137)

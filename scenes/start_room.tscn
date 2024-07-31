@@ -1,12 +1,7 @@
-
 [gd_scene load_steps=26 format=3 uid="uid://ch8ycvj6aictp"]
 
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_4ikjq"]
 [ext_resource type="Script" path="res://scripts/mtile.gd" id="1_ineig"]
-
-
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_4ikjq"]
-
-
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_wfmvh"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_wnk1i"]
 [ext_resource type="Texture2D" uid="uid://d0kypvppinexu" path="res://assets/interactables/fireplace-TD/fireplace-TD.png" id="4_w7j8v"]
@@ -79,7 +74,7 @@ dest_scene = "hallway1"
 spawnin = Vector2(222, 90)
 
 [node name="transport2" parent="." instance=ExtResource("2_wfmvh")]
-position = Vector2(269, 112)
+position = Vector2(277, 113)
 dest_scene = "guestbedroom"
 spawnin = Vector2(-22, 111)
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://tdey0ckls6w1"]
 
 [ext_resource type="Script" path="res://scripts/mtile.gd" id="1_j56f5"]
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="2_3mu26"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="2_3mu26"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_j471h"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_3qvhg"]
 [ext_resource type="Texture2D" uid="uid://b8lk6bfxn3nlv" path="res://assets/interactables/tall-lamp-TD/tall-lamp-TD.png" id="4_l2pnq"]
@@ -59,11 +59,6 @@ layer_4/tile_data = PackedInt32Array(196612, 131093, 131085, 196616, 1769493, 65
 layer_5/name = "Front"
 layer_5/z_index = 15
 layer_5/tile_data = PackedInt32Array(524292, 65538, 65546, 393222, 393218, 7, 458758, 393218, 65544, 524294, 393218, 9, 458760, 3, 268501002, 524296, 3, 268501003, 458763, 3, 65546, 524299, 3, 65547, 524303, 65538, 65546, 458752, 2, 65546, 524288, 2, 65547, 458770, 2, 65546, 524306, 2, 65547)
-
-[node name="transport" parent="." instance=ExtResource("2_j471h")]
-position = Vector2(-17, 112)
-dest_scene = "kitchen"
-spawnin = Vector2(237, 162)
 
 [node name="transport2" parent="." instance=ExtResource("2_j471h")]
 position = Vector2(225, 60)
@@ -167,6 +162,11 @@ second_texture = ExtResource("11_c0w8b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plant-type2"]
 position = Vector2(-6, 0)
 shape = SubResource("RectangleShape2D_7w0bq")
+
+[node name="transport" parent="." instance=ExtResource("2_j471h")]
+position = Vector2(-20, 111)
+dest_scene = "kitchen"
+spawnin = Vector2(230, 160)
 
 [node name="plant-type2-2" parent="." instance=ExtResource("3_3qvhg")]
 z_index = 100

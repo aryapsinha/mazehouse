@@ -1,13 +1,7 @@
+[gd_scene load_steps=15 format=3 uid="uid://ch8ycvj6aictp"]
 
-
-[gd_scene load_steps=14 format=3 uid="uid://ch8ycvj6aictp"]
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_4ikjq"]
-
-
-[ext_resource type="Script" path="res://scripts/yytile.gd" id="1_ds304"]
-
-
-
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_4ikjq"]
+[ext_resource type="Script" path="res://scripts/mtile.gd" id="1_ineig"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_wfmvh"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_wnk1i"]
 [ext_resource type="Texture2D" uid="uid://d0kypvppinexu" path="res://assets/interactables/fireplace-TD/fireplace-TD.png" id="4_w7j8v"]
@@ -22,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://emqnh3g6p1xk" path="res://assets/interactables/book-TD/book-open-TD.png" id="13_n5i1q"]
 
 [node name="start-room" type="Node2D"]
-script = ExtResource("1_ds304")
+script = ExtResource("1_ineig")
 metadata/_edit_horizontal_guides_ = [930.673, 680.0]
 
 [node name="TileMap" type="TileMap" parent="."]

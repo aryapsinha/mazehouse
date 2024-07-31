@@ -14,22 +14,26 @@ func _process(delta: float) -> void:
 			#print(spawn.position)
 			Navigation.go(dest_scene)
 			print(dest_scene)
-			await get_tree().create_timer(1).timeout
+	
 			
 	
 func _on_body_entered(body: Node2D) -> void:
 	print(body)
-	#await get_tree().create_timer(0.5).timeout
-	#if Input.is_action_pressed("transport"):
 	Player.transmessage.show()
+	await get_tree().create_timer(0.3).timeout
+	#if Input.is_action_pressed("transport"):
+	
 	print("show")
 	#Player.position = spawnin
 	#print(spawn.position)
 	#Navigation.go(dest_scene)
+	
 	transportable = true 
 
 func _on_body_exited(body: Node2D) -> void:
 	Player.transmessage.hide()
+	await get_tree().create_timer(0.3).timeout
+	
 	print("hide")
 	transportable = false 
 	

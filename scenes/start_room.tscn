@@ -1,20 +1,10 @@
 
+[gd_scene load_steps=26 format=3 uid="uid://ch8ycvj6aictp"]
 
 [ext_resource type="Script" path="res://scripts/mtile.gd" id="1_ineig"]
 
-[gd_scene load_steps=26 format=3 uid="uid://ch8ycvj6aictp"]
-
-
-
-
-
-
 
 [ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_4ikjq"]
-
-
-
-
 
 
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_wfmvh"]

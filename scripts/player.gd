@@ -15,7 +15,12 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func interact():
+	#await get_tree().create_timer(0.3).timeout
 	$Sprite2D.set_texture(intText)
 	
+	
 func normal():
+	#await get_tree().create_timer(0.3).timeout
 	$Sprite2D.set_texture(normText)
+	#Input.start_joy_vibration(0, 0.5, 0.5, 0.1)
+	

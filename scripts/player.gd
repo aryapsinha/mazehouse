@@ -19,6 +19,7 @@ func interact():
 	$Sprite2D.set_texture(intText)
 	
 	
+	
 func normal():
 	#await get_tree().create_timer(0.3).timeout
 	$Sprite2D.set_texture(normText)

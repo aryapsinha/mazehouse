@@ -8,6 +8,7 @@ signal normalSprite
 var isFirst = true; 
 @export var toggleable = true; 
 var interactable = false
+var alrvib = false;
 #@onready var app = $AudioStreamPlayer
 
 
@@ -25,17 +26,20 @@ func _process(delta: float) -> void:
 	
 	#***need to make message disappear after interacting with nontoggleable
 	if interactable:
+		
 		await get_tree().create_timer(0.3).timeout
 		if not toggleable and Input.is_action_pressed("interact"):
 			#print("vibrate")
 			$Sprite2D.set_texture(second_texture)
 			Player.interact()
-			Input.start_joy_vibration(0, 0.5, 0.5, 0.3)
+			_startvib() #need to move this out of process
 			isFirst = false 
 		if toggleable and Input.is_action_pressed("interact"):
+			
 			#print("vibrate")
 			Player.interact()
-			Input.start_joy_vibration(0, 0.5, 0.5, 0.3)
+			_startvib()
+			
 			if isFirst:
 				$Sprite2D.set_texture(second_texture)
 				#print("togglefirst")
@@ -75,3 +79,13 @@ func _on_body_entered(body: Node2D) -> void:
 		#await get_tree().create_timer(0.5).timeout
 		interactable = true
 		print(interactable)
+		
+func _startvib():
+	if !alrvib:
+		alrvib = true 
+		print("vibrate")
+		Input.start_joy_vibration(0, 0.5, 0.5, 0.3)
+		await get_tree().create_timer(0.3).timeout
+		alrvib = false
+	
+	

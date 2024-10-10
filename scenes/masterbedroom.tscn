@@ -111,7 +111,6 @@ toggleable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="toy-star"]
 position = Vector2(0.28595, -3.47368)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1pr4i")
 
 [node name="cupboard" parent="." instance=ExtResource("3_cv6wp")]

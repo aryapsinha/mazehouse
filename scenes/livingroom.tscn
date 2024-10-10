@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/mtile.gd" id="1_gv1u1"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="1_jeivo"]
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="2_bndxi"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="2_bndxi"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_r8e5o"]
 [ext_resource type="Texture2D" uid="uid://12n77l7hlocw" path="res://assets/interactables/aseprite-orangesofa-front-pillow-og.png" id="4_14itd"]
 [ext_resource type="Texture2D" uid="uid://buhxhxj5kknmq" path="res://assets/interactables/aseprite-orangesofa-front-pillow1.png" id="5_d6qgh"]

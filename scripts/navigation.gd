@@ -8,7 +8,7 @@ const guestbedroom = preload("res://scenes/guestbedroom.tscn")
 const indoorgarden = preload("res://scenes/indoor_garden.tscn")
 const laundryroom = preload("res://scenes/laundryroom.tscn")
 const masterbedroom = preload("res://scenes/masterbedroom.tscn")
-const nursey = preload("res://scenes/nursery_child_room.tscn")
+const nursey = preload("res://scenes/nursery_child_room.tscn") #spelling error - keep in mind
 const startroom = preload("res://scenes/start_room.tscn")
 const storageroom = preload("res://scenes/storageroom.tscn")
 const studyroom = preload("res://scenes/studyroom.tscn")
@@ -21,6 +21,7 @@ const hallway1 = preload("res://scenes/hallway_1.tscn")
 const hallway2 = preload("res://scenes/hallway_2.tscn")
 const hallway3 = preload("res://scenes/hallway_3.tscn")
 const hallway4 = preload("res://scenes/hallway_4.tscn")
+const endscreen = preload("res://scenes/endscreen.tscn")
 '''
 
 
@@ -88,6 +89,8 @@ func go(leveltag):
 			sceneload = hallway3
 		"hallway4":
 			sceneload = hallway4
+		"endscreen":
+			sceneload = endscreen
 	if sceneload != null:
 		#spawndoortag = spawndoor
 		

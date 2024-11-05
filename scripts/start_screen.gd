@@ -5,7 +5,7 @@ extends Node2D
 func _ready() -> void:
 	Player.hide()
 	$Camera2D.make_current(); 
-	pass # Replace with function body.
+	 # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,4 +17,4 @@ func _on_button_pressed() -> void:
 	Player.show(); 
 	$"/root/Player/Camera2D".make_current(); 
 	Navigation.go("startroom")
-	pass # Replace with function body.
+	Tracking.start() # Replace with function body.

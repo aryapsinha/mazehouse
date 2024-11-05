@@ -8,6 +8,9 @@ number of interactions -- increment variable here
 
 extends Node
 
+var totaltime = 0.0; 
+var gameend = false; 
+var gamestart = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,4 +19,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if gamestart and !gameend: 
+		totaltime += delta; 
+
+func start(): 
+	gamestart = true; 
+	
+func end(): 
+	gameend = true; 
+	print(totaltime)

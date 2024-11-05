@@ -131,4 +131,16 @@ func start():
 func end(): 
 	gameend = true; 
 	print(totaltime)
-	print(instance_from_id(curroom))
+	
+
+
+func send():
+	var eventdata = {}
+	var datafile = FileAccess.open("res://datasheets/tester.json", FileAccess.READ_WRITE)
+	datafile.seek_end()
+	eventdata["Total"] = []
+	eventdata["Startroom"] = []
+	eventdata["Total"].append(totaltime)
+	eventdata["Startroom"].append(startroom)
+	datafile.store_line(JSON.stringify(eventdata, "\t"))
+	datafile.close()

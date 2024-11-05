@@ -18,3 +18,4 @@ func _on_button_pressed() -> void:
 	$"/root/Player/Camera2D".make_current(); 
 	Navigation.go("startroom")
 	Tracking.start() # Replace with function body.
+	Tracking.switch("startroom")

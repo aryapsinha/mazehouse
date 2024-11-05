@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 			Player.position = spawnin
 			#print(spawn.position)
 			Navigation.go(dest_scene)
+			#Tracking.switch(dest_scene)
 			print(dest_scene)
 
 			

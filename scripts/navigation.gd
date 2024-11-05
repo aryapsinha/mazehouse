@@ -42,23 +42,33 @@ godot stopwatch:
 
 '''
 #
-
+var current = null
 var spawndoortag
 # Called when the node enters the scene tree for the first time.
 func go(leveltag):
+	
+	if current != null:
+		Tracking.switch(current)
+	
+	current = leveltag
 	var sceneload
 	
 	match leveltag:
 		"kitchen":
 			sceneload = kitchen
+			
 		"livingroom":
 			sceneload = livingroom
+			
 		"bathroom2":
 			sceneload = bathroom2
+			
 		"cutesy":
 			sceneload = cutesy
+			
 		"guestbedroom":
 			sceneload = guestbedroom
+			Tracking.switch(guestbedroom)
 		"indoorgarden":
 			sceneload = indoorgarden
 		"laundryroom":

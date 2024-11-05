@@ -26,6 +26,22 @@ const hallway4 = preload("res://scenes/hallway_4.tscn")
 
 
 '''
+'''
+Tracking notes: 
+put variables to track the room here --> based on how godot write to text file is 
+
+start timer here and add to time variable? time variable for that room perhaps? 
+- maybe have global time variables for each room and keep adding to it, then import to file
+- does godot constantly report or report all variables to sheet at the end (prob at end)
+
+godot stopwatch: 
+	in delta: time_elapsed += delta 
+	https://forum.godotengine.org/t/how-do-i-add-a-stopwatch-that-will-count-up-when-the-player-is-alive-and-reset-when-he-died/818/2
+
+
+'''
+#
+
 var spawndoortag
 # Called when the node enters the scene tree for the first time.
 func go(leveltag):

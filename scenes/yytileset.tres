@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c43o8pegnxo01" path="res://assets/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png" id="2_lvunp"]
 [ext_resource type="Texture2D" uid="uid://d11og8pi26sy4" path="res://assets/interior full/16x16/couches16x16.png" id="3_wpts8"]
 [ext_resource type="Texture2D" uid="uid://c2iacnhy5rqky" path="res://assets/interior full/16x16/couchtables16x16.png" id="4_1c2dh"]
-[ext_resource type="Texture2D" uid="uid://qlbilrk136k2" path="res://assets/interior full/basics/rugs.png" id="4_02yqx"]
+[ext_resource type="Texture2D" uid="uid://qlbilrk136k2" path="res://assets/rugs.png" id="4_02yqx"]
 [ext_resource type="Texture2D" uid="uid://clctag60v1mgm" path="res://assets/beds-wider/cozyint-darkbrownbeds-wider.png" id="5_555ir"]
 [ext_resource type="Texture2D" uid="uid://dngvd4fecfs6a" path="res://assets/interior full/basics/curtains.png" id="5_sw77r"]
 [ext_resource type="Texture2D" uid="uid://bd3biqq57qoow" path="res://assets/interior full/basics/doors.png" id="6_2t5un"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://drsd3q76qn1g4"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_tabp5"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_tabp5"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_vjqa0"]
 
 [node name="AngstyRoom" type="Node2D"]
@@ -29,18 +29,18 @@ layer_7/z_index = -10
 layer_7/tile_data = PackedInt32Array(589830, 983058, 65536, 589831, 983058, 65536, 589832, 983058, 65536, 589833, 983058, 65536, 589836, 983058, 65536, 589837, 983058, 65536, 589838, 983058, 65536, 196622, 983058, 65536, 196621, 983058, 65536, 196620, 983058, 65536, 196619, 983058, 65536, 196618, 983058, 65536, 196617, 983058, 65536, 196616, 983058, 65536, 196615, 983058, 65536, 196614, 983058, 65536, 196613, 983058, 65536, 196612, 983058, 65536, 196608, 983058, 65536, 196609, 983058, 65536, 196610, 983058, 65536, 196611, 983058, 65536, 655366, 983058, 65536, 655367, 1769490, 65546, 720903, 983058, 65536, 786439, 983058, 65536, 851975, 1769490, 65546, 917511, 1769490, 65546, 851982, 983058, 65536, 851981, 983058, 65536, 851980, 983058, 65536, 786444, 983058, 65536, 786445, 983058, 65536, 786446, 983058, 65536, 917518, 1245205, 7, 655360, 1769490, 65546, 589824, 1769490, 65546, 524288, 1769490, 65546, 458752, 1769490, 65546, 655364, 3, 65547, 655365, 3, 65547, 720910, 1769490, 268501002)
 
 [node name="transport" parent="." instance=ExtResource("2_vjqa0")]
-position = Vector2(261, 112)
+position = Vector2(249, 112)
 dest_scene = "hallway4"
 spawnin = Vector2(143, 140)
 
 [node name="transport2" parent="." instance=ExtResource("2_vjqa0")]
-position = Vector2(48, 197)
+position = Vector2(38, 197)
 rotation = 1.5708
 dest_scene = "hallway3"
 spawnin = Vector2(16, 98)
 
 [node name="transport3" parent="." instance=ExtResource("2_vjqa0")]
-position = Vector2(176, 278)
+position = Vector2(167, 277)
 rotation = 1.5708
 dest_scene = "hallway3"
 spawnin = Vector2(112, 97)

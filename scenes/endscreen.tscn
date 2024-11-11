@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba0ddl487r1v7"]
+
+[ext_resource type="Script" path="res://scripts/endscreen.gd" id="1_k04m7"]
+
+[node name="endscreen" type="Node2D"]
+script = ExtResource("1_k04m7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+offset_left = -577.0
+offset_top = -327.0
+offset_right = 573.0
+offset_bottom = 320.0
+color = Color(0.418774, 0.652746, 0.774146, 1)
+
+[node name="Button" type="Button" parent="Camera2D"]
+offset_left = -206.0
+offset_top = -63.0
+offset_right = 202.0
+offset_bottom = 66.0
+text = "Send data"
+
+[connection signal="pressed" from="Camera2D/Button" to="." method="_on_button_pressed"]

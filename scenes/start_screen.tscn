@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://b11pw3v4j6x6n"]
+
+[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_0278g"]
+
+[node name="start screen" type="Node2D"]
+script = ExtResource("1_0278g")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-10, -2)
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+offset_left = -575.0
+offset_top = -323.0
+offset_right = 578.0
+offset_bottom = 318.0
+color = Color(0.772439, 0.523793, 0.569337, 1)
+
+[node name="Button" type="Button" parent="Camera2D"]
+offset_left = -157.0
+offset_top = -63.0
+offset_right = 154.0
+offset_bottom = 56.0
+text = "Start"
+
+[connection signal="pressed" from="Camera2D/Button" to="." method="_on_button_pressed"]

@@ -133,7 +133,23 @@ func end():
 	print(totaltime)
 	
 
+'''
+var file = File.new()
+var path = "user://example.txt"
 
+if file.file_exists(path):
+	file.open(path, File.READ_WRITE)
+	file.seek_end()
+else:
+	file.open(path, File.WRITE)
+
+# append lines to file
+file.store_line("example")
+
+file.close()
+
+
+'''
 func send():
 	var eventdata = {}
 	var datafile = FileAccess.open("res://datasheets/tester.json", FileAccess.READ_WRITE)

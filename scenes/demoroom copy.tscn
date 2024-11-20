@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://bb637sqphoxl8"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_clyo0"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_clyo0"]
 [ext_resource type="Script" path="res://scripts/mtile.gd" id="1_m73sy"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="2_evybg"]
 [ext_resource type="Texture2D" uid="uid://dpadwpmbxnqc2" path="res://assets/interactables/aseprite-oven.png" id="3_21sh8"]

@@ -152,11 +152,25 @@ file.close()
 '''
 func send():
 	var eventdata = {}
-	var datafile = FileAccess.open("res://datasheets/tester.json", FileAccess.READ_WRITE)
-	datafile.seek_end()
+	var datafile = FileAccess.open("res://datasheets/tester.json", FileAccess.READ)
+	var content = datafile.get_as_text()
+	var json = JSON.new()
+	var parse = json.parse(content)
+	var data = json.get_data()
+	
+	
+	
 	eventdata["Total"] = []
 	eventdata["Startroom"] = []
 	eventdata["Total"].append(totaltime)
 	eventdata["Startroom"].append(startroom)
-	datafile.store_line(JSON.stringify(eventdata, "\t"))
+	data["eval"].append(eventdata)
 	datafile.close()
+	
+	var fiwrite = FileAccess.open("res://datasheets/tester.json", FileAccess.WRITE)
+	var jstring = JSON.stringify(data, "\t")
+	fiwrite.store_string(jstring)
+	fiwrite.close()
+	
+	#datafile.store_line(JSON.stringify(eventdata, "\t"))
+	

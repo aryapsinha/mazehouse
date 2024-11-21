@@ -182,6 +182,7 @@ func send():
 	eventdata["Interactions"] = intercount
 	eventdata["Total"] = totaltime
 	eventdata["Rooms"] = roomstring
+	
 	eventdata["Startroom"] = startroom
 	eventdata["Kitchen"] = kitchen
 	eventdata["Living Room"] = livingroom

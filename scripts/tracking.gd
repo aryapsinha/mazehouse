@@ -8,7 +8,7 @@ number of interactions -- increment variable here
 
 extends Node
 
-
+var roomstring = ""
 
 var kitchen = 0.0
 var livingroom = 0.0
@@ -31,7 +31,7 @@ var hallway2 = 0.0
 var hallway3 = 0.0
 var hallway4 = 0.0
 
-
+var intercount = 0
 
 
 var curroom = startroom
@@ -53,75 +53,95 @@ func _process(delta: float) -> void:
 func switch(leveltag): 
 	
 	match leveltag:
-		"kitchen":
+		"kitchen": #k
 			kitchen += curroom
+			roomstring += "k"
 			curroom = 0
 			print(kitchen)
 			
-		"livingroom":
+		"livingroom": #v
 			livingroom += curroom
+			roomstring += "v"
 			curroom = 0
 			
-		"bathroom2":
+		"bathroom2": #d
 			bathroom2 += curroom
+			roomstring += "d"
 			curroom = 0
 			
-		"cutesy":
+		"cutesy": #c
 			cutesy += curroom
+			roomstring += "c"
 			curroom = 0
 			
-		"guestbedroom":
+		"guestbedroom": #g
 			guestbedroom += curroom
+			roomstring += "g"
 			curroom = 0
 			
-		"indoorgarden":
+		"indoorgarden": #i
 			indoorgarden += curroom
+			roomstring += "i"
 			curroom = 0
-		"laundryroom":
+		"laundryroom": #l
 			laundryroom += curroom
+			roomstring += "l"
 			curroom = 0
-		"masterbedroom":
+		"masterbedroom": #m
 			masterbedroom += curroom
+			roomstring += "m"
 			curroom = 0
-		"nursey":
+		"nursey": #n
 			nursey += curroom
+			roomstring += "n"
 			curroom = 0
-		"startroom":
+		"startroom": #t
 			startroom += curroom
+			roomstring += "t"
 			curroom = 0
 			print(startroom)
-		"storageroom":
+		"storageroom": #o
 			storageroom += curroom
+			roomstring += "o"
 			curroom = 0
-		"studyroom":
+		"studyroom": #u
 			studyroom += curroom
+			roomstring += "u"
 			curroom = 0
-		"library":
+		"library": #y
 			library += curroom
+			roomstring += "y"
 			curroom = 0
-		"gamesroom":
+		"gamesroom": #e
 			gamesroom += curroom
+			roomstring += "e"
 			curroom = 0
-		"angsty":
+		"angsty": #a
 			angsty += curroom
+			roomstring += "a"
 			curroom = 0
-		"bathroom1":
+		"bathroom1": #b
 			bathroom1 += curroom
+			roomstring += "b"
 			curroom = 0
-		"hallway1":
+		"hallway1": #1
 			hallway1 += curroom
+			roomstring += "1"
 			curroom = 0
 			print(hallway1)
-		"hallway2":
+		"hallway2": #2
 			hallway2 += curroom
+			roomstring += "2"
 			curroom = 0
 			print(hallway2)
-		"hallway3":
+		"hallway3": #3
 			hallway3 += curroom
+			roomstring += "3"
 			curroom = 0
 			print(hallway3)
-		"hallway4":
+		"hallway4": #4
 			hallway4 += curroom
+			roomstring += "4"
 			curroom = 0
 			print(hallway4)
 		
@@ -159,11 +179,32 @@ func send():
 	var data = json.get_data()
 	
 	
+	eventdata["Interactions"] = intercount
+	eventdata["Total"] = totaltime
+	eventdata["Rooms"] = roomstring
+	eventdata["Startroom"] = startroom
+	eventdata["Kitchen"] = kitchen
+	eventdata["Living Room"] = livingroom
+	eventdata["Bathroom 2"] = bathroom2
+	eventdata["Cutesy"] = cutesy
+	eventdata["Guest Bed"] = guestbedroom
+	eventdata["Indoor Garden"] = indoorgarden
+	eventdata["Laundry"] = laundryroom
+	eventdata["Master"] = masterbedroom
+	eventdata["Nursery"] = nursey
+	eventdata["Storage"] = storageroom
+	eventdata["Study"] = studyroom
+	eventdata["Angsty"] = angsty
+	eventdata["Bathroom 1"] = bathroom1
+	eventdata["Games"] = gamesroom
+	eventdata["Library"] = library
+	eventdata["Hallway 1"] = hallway1
+	eventdata["Hallway 2"] = hallway2
+	eventdata["Hallway 3"] = hallway3
+	eventdata["Hallway 4"] = hallway4
 	
-	eventdata["Total"] = []
-	eventdata["Startroom"] = []
-	eventdata["Total"].append(totaltime)
-	eventdata["Startroom"].append(startroom)
+	#eventdata["Total"].append(totaltime)
+	#eventdata["Startroom"].append(startroom)
 	data["eval"].append(eventdata)
 	datafile.close()
 	

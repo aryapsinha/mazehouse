@@ -8,6 +8,8 @@ number of interactions -- increment variable here
 
 extends Node
 
+var haptics = true; 
+
 var roomstring = ""
 
 var kitchen = 0.0
@@ -178,7 +180,7 @@ func send():
 	var parse = json.parse(content)
 	var data = json.get_data()
 	
-	
+	eventdata["Haptics"] = haptics
 	eventdata["Interactions"] = intercount
 	eventdata["Total"] = totaltime
 	eventdata["Rooms"] = roomstring

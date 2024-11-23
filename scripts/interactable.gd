@@ -37,14 +37,16 @@ func _process(delta: float) -> void:
 				Tracking.intercount += 1
 				$Sprite2D.set_texture(second_texture)
 				Player.interact()
-				_startvib() #need to move this out of process
+				if Tracking.haptics: 
+					_startvib() #need to move this out of process
 				isFirst = false 
 				
 			if toggleable and Input.is_action_pressed("interact"):
 				Tracking.intercount += 1
 				#print("vibrate")
 				Player.interact()
-				_startvib()
+				if Tracking.haptics: 
+					_startvib() #need to move this out of process
 				
 				if isFirst:
 					$Sprite2D.set_texture(second_texture)

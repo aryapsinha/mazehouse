@@ -8,7 +8,7 @@ number of interactions -- increment variable here
 
 extends Node
 
-var haptics = true; 
+var haptics = false; 
 
 var roomstring = ""
 

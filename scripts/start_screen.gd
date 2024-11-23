@@ -3,8 +3,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$"Camera2D/SettingsMenu".hide();
 	Player.hide()
-	$"Camera2D/SettingsMenu/Haptics".text = Tracking.haptics
+	$"Camera2D/SettingsMenu/Haptics".text = str(Tracking.haptics)
 	$Camera2D.make_current(); 
 	 # Replace with function body.
 
@@ -33,7 +34,11 @@ func _on_start_button_pressed() -> void:
 	Navigation.go("instructions")
 
 
+
 func _on_haptics_pressed() -> void:
 	Tracking.haptics = !Tracking.haptics
-	$"Camera2D/SettingsMenu/Haptics".text = Tracking.haptics
+	$"Camera2D/SettingsMenu/Haptics".text = str(Tracking.haptics)
+	$"Camera2D/SettingsButton".hide()
+	$"Camera2D/StartButton".hide()
+	$"Camera2D/SettingsMenu".show();
 	 # Replace with function body.

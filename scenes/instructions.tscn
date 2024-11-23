@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dket74jk4sj84"]
+[gd_scene load_steps=6 format=3 uid="uid://dket74jk4sj84"]
 
 [ext_resource type="Texture2D" uid="uid://h5qxlidlqkgw" path="res://assets/Housew:outButton.png" id="1_gyra7"]
 [ext_resource type="Script" path="res://scripts/instructions.gd" id="1_j2adk"]
 [ext_resource type="FontFile" uid="uid://4kqw3jm2qe35" path="res://assets/Fonts/arcadeclassic/ARCADECLASSIC.TTF" id="3_k0w8b"]
+[ext_resource type="Texture2D" uid="uid://cpka6hajf2k06" path="res://assets/beds-wider/duck256.png" id="4_x6gdx"]
 
 [sub_resource type="Theme" id="Theme_xy1a6"]
 
@@ -18,15 +19,70 @@ offset_right = 1032.0
 offset_bottom = 806.0
 texture = ExtResource("1_gyra7")
 
-[node name="Start" type="Button" parent="Camera2D/TextureRect"]
-offset_left = 2.0
-offset_top = 3.0
-offset_right = 117.0
-offset_bottom = 57.0
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+offset_left = -436.0
+offset_top = -250.0
+offset_right = 437.0
+offset_bottom = 249.0
+color = Color(0.272701, 0.114774, 0.0674188, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D"]
+offset_left = -422.0
+offset_top = -233.0
+offset_right = 421.0
+offset_bottom = 232.0
+color = Color(0.300694, 0.184417, 0.111644, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Camera2D"]
+offset_left = -405.0
+offset_top = -217.0
+offset_right = 404.0
+offset_bottom = 215.0
+color = Color(0.364706, 0.227451, 0.137255, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="Camera2D"]
+offset_left = -385.0
+offset_top = -197.0
+offset_right = 387.0
+offset_bottom = 197.0
+color = Color(0.364706, 0.227451, 0.137255, 1)
+
+[node name="Label" type="Label" parent="Camera2D"]
+offset_left = -368.0
+offset_top = -202.0
+offset_right = 367.0
+offset_bottom = 211.0
+text = "In this simulation, you are GHOST. 
+
+GHOST is visiting the home of its great-great-grandfather’s boyfriend’s dog’s niece’s great aunt. 
+
+Unfortunately, she is dead. But her house still remains. And you’re just dropping by to find something important of hers... 
+
+Below, you will see the RUBBER DUCKY you are searching for. Click on the question button on the top right to view this image again.
+
+
+
+
+Press               to begin the simulation."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Start" type="Button" parent="Camera2D"]
+offset_left = -96.0
+offset_top = 123.0
+offset_right = -45.0
+offset_bottom = 173.0
 theme = SubResource("Theme_xy1a6")
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("3_k0w8b")
 theme_override_font_sizes/font_size = 35
-text = "Back"
+text = "○"
 
-[connection signal="pressed" from="Camera2D/TextureRect/Start" to="." method="_on_start_pressed"]
+[node name="TextureRect2" type="TextureRect" parent="Camera2D"]
+offset_left = -49.0
+offset_top = 45.0
+offset_right = 50.0
+offset_bottom = 125.0
+texture = ExtResource("4_x6gdx")
+
+[connection signal="pressed" from="Camera2D/Start" to="." method="_on_start_pressed"]

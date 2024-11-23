@@ -19,7 +19,6 @@ offset_right = 1032.0
 offset_bottom = 806.0
 texture = ExtResource("1_gyra7")
 
-
 [node name="ColorRect" type="ColorRect" parent="Camera2D"]
 offset_left = -436.0
 offset_top = -250.0
@@ -73,7 +72,6 @@ offset_left = -96.0
 offset_top = 123.0
 offset_right = -45.0
 offset_bottom = 173.0
-
 theme = SubResource("Theme_xy1a6")
 theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
 theme_override_fonts/font = ExtResource("3_k0w8b")

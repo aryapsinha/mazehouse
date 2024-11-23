@@ -16,11 +16,11 @@ func _physics_process(delta: float) -> void:
 	velocity = Input.get_vector("left", "right", "up", "down", 0.5)*SPEED
 	move_and_slide()
 	
-	
-	'''
-	#temporary end screen trigger -- replace when decided functionality 
 	if Input.is_action_pressed("endtrig"):
 		Navigation.go("endscreen")
+	'''
+	#temporary end screen trigger -- replace when decided functionality 
+	
 	
 	if Input.is_action_pressed("help"):
 		if helpvalid == true: 

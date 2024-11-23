@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://dm1xbo6h7sxyc"]
+[gd_scene load_steps=2 format=3 uid="uid://colwckt1884xn"]
+
+[ext_resource type="Texture2D" uid="uid://b7gkj8kdoym2n" path="res://assets/Duck pop up.png" id="1_gr2fw"]
 
 [node name="ObjectivePopUp" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("1_gr2fw")

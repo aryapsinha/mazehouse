@@ -27,10 +27,13 @@ func _on_settings_button_pressed() -> void:
 	
 	 # Replace with function body.
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if Input.is_action_pressed("start"): 
+			_on_start_button_pressed()
+
 
 func _on_start_button_pressed() -> void:
-	Player.show(); 
-	$"/root/Player/Camera2D".make_current(); 
 	Navigation.go("instructions")
 
 

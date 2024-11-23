@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/mtile.gd" id="1_pcq4a"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_de6ru"]
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="2_xh880"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="2_xh880"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_4ex1a"]
 [ext_resource type="Texture2D" uid="uid://cqy761lpbrxvf" path="res://assets/interactables/curtains (brown)/cozyint-curtains-brown-open.png" id="4_ingk4"]
 [ext_resource type="Texture2D" uid="uid://ccaoo3h2i3h78" path="res://assets/interactables/curtains (brown)/cozyint-curtains-brown-drawn.png" id="5_pcnaq"]

@@ -32,7 +32,7 @@ func _on_start_button_pressed() -> void:
 	Player.show(); 
 	$"/root/Player/Camera2D".make_current(); 
 	Navigation.go("instructions")
-	
+
 
 
 func _on_haptics_pressed() -> void:

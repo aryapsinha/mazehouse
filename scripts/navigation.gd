@@ -22,6 +22,8 @@ const hallway2 = preload("res://scenes/hallway_2.tscn")
 const hallway3 = preload("res://scenes/hallway_3.tscn")
 const hallway4 = preload("res://scenes/hallway_4.tscn")
 const endscreen = preload("res://scenes/endscreen.tscn")
+
+const instructions = preload("res://scenes/instructions.tscn")
 '''
 
 

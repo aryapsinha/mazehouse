@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dket74jk4sj84"]
+
+[ext_resource type="Texture2D" uid="uid://h5qxlidlqkgw" path="res://assets/Housew:outButton.png" id="1_gyra7"]
+[ext_resource type="Script" path="res://scripts/instructions.gd" id="1_j2adk"]
+[ext_resource type="FontFile" uid="uid://4kqw3jm2qe35" path="res://assets/Fonts/arcadeclassic/ARCADECLASSIC.TTF" id="3_k0w8b"]
+
+[sub_resource type="Theme" id="Theme_xy1a6"]
+
+[node name="Instructions" type="Node2D"]
+script = ExtResource("1_j2adk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D"]
+offset_left = -802.0
+offset_top = -484.0
+offset_right = 1032.0
+offset_bottom = 806.0
+texture = ExtResource("1_gyra7")
+
+[node name="Start" type="Button" parent="Camera2D/TextureRect"]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 117.0
+offset_bottom = 57.0
+theme = SubResource("Theme_xy1a6")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("3_k0w8b")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[connection signal="pressed" from="Camera2D/TextureRect/Start" to="." method="_on_start_pressed"]

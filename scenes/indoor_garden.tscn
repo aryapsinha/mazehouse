@@ -150,7 +150,6 @@ second_texture = ExtResource("11_pln5i")
 toggleable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sink"]
-visible = false
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_wbflh")
 
@@ -161,7 +160,6 @@ second_texture = ExtResource("13_gscda")
 toggleable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="flower-pink"]
-visible = false
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_hlo3g")
 
@@ -172,6 +170,5 @@ second_texture = ExtResource("15_axnan")
 toggleable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="gnome-green"]
-visible = false
 position = Vector2(-2, -1.5)
 shape = SubResource("RectangleShape2D_fmqxg")

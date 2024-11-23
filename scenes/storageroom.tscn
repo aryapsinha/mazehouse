@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bg8wsuphvqkfa"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_wj8ij"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_wj8ij"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_7rmuc"]
 
 [node name="storageroom" type="Node2D"]

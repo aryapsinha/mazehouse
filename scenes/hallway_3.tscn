@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dv4cp7drf2ll8"]
 
-[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/yytileset.tres" id="1_dlwwf"]
+[ext_resource type="TileSet" uid="uid://dhfro7c7op6u0" path="res://scenes/tileset.tres" id="1_dlwwf"]
 [ext_resource type="PackedScene" uid="uid://ci4jxr4grn1j0" path="res://scenes/transport.tscn" id="2_uqtb4"]
 [ext_resource type="PackedScene" uid="uid://nspkk5b3bjoj" path="res://scenes/interactable.tscn" id="3_pwb3c"]
 [ext_resource type="Texture2D" uid="uid://c10mgu6hbfnms" path="res://assets/interactables/flower vase/aseprite-flowervase-upright-og.png" id="4_igrmw"]

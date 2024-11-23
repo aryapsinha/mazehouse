@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://d07gl1h2rhkcb"]
+
+[ext_resource type="Texture2D" uid="uid://b1r07sdgdujet" path="res://assets/QuestionMark32x32.png" id="1_epyjg"]
+
+[node name="Objective" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Button" type="Button" parent="."]
+offset_left = -21.0
+offset_top = -21.0
+offset_right = 19.0
+offset_bottom = 19.0
+button_mask = 2
+icon = ExtResource("1_epyjg")
+flat = true

@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 	if interactable:
 		
 		await get_tree().create_timer(0.3).timeout
-		if self.name == "toy-duck" and Input.is_action_pressed("interact"):
+		if self.name == "rubber-duck" and Input.is_action_pressed("interact"):
 			Navigation.go("endscreen")
 		else:
 			if not toggleable and Input.is_action_pressed("interact"):

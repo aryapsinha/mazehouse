@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b11pw3v4j6x6n"]
+[gd_scene load_steps=5 format=3 uid="uid://b11pw3v4j6x6n"]
 
 [ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_0278g"]
+[ext_resource type="Texture2D" uid="uid://2smcmyen7ols" path="res://assets/HouseLoadingScreen.png" id="2_hr4g2"]
+[ext_resource type="FontFile" uid="uid://4kqw3jm2qe35" path="res://assets/Fonts/arcadeclassic/ARCADECLASSIC.TTF" id="3_5ggdv"]
+
+[sub_resource type="Theme" id="Theme_2vqon"]
 
 [node name="start screen" type="Node2D"]
 script = ExtResource("1_0278g")
@@ -8,18 +12,83 @@ script = ExtResource("1_0278g")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-10, -2)
 
-[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+[node name="TextureRect" type="TextureRect" parent="Camera2D"]
 offset_left = -575.0
 offset_top = -323.0
-offset_right = 578.0
-offset_bottom = 318.0
-color = Color(0.772439, 0.523793, 0.569337, 1)
+offset_right = 579.0
+offset_bottom = 322.0
+texture = ExtResource("2_hr4g2")
 
-[node name="Button" type="Button" parent="Camera2D"]
-offset_left = -157.0
-offset_top = -63.0
-offset_right = 154.0
-offset_bottom = 56.0
+[node name="StartButton" type="Button" parent="Camera2D"]
+offset_left = 175.0
+offset_top = -70.0
+offset_right = 399.0
+offset_bottom = -12.0
+theme = SubResource("Theme_2vqon")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("3_5ggdv")
+theme_override_font_sizes/font_size = 35
 text = "Start"
+flat = true
 
-[connection signal="pressed" from="Camera2D/Button" to="." method="_on_button_pressed"]
+[node name="SettingsButton" type="Button" parent="Camera2D"]
+offset_left = 176.0
+offset_top = 30.0
+offset_right = 400.0
+offset_bottom = 88.0
+theme = SubResource("Theme_2vqon")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("3_5ggdv")
+theme_override_font_sizes/font_size = 35
+text = "Settings"
+flat = true
+
+[node name="SettingsMenu" type="ColorRect" parent="Camera2D"]
+offset_left = -400.0
+offset_top = -203.0
+offset_right = 381.0
+offset_bottom = 238.0
+color = Color(0.305882, 0.176471, 0.0980392, 1)
+
+[node name="Back" type="Button" parent="Camera2D/SettingsMenu"]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 117.0
+offset_bottom = 57.0
+theme = SubResource("Theme_2vqon")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("3_5ggdv")
+theme_override_font_sizes/font_size = 35
+text = "Back"
+
+[node name="Haptics" type="Button" parent="Camera2D/SettingsMenu"]
+offset_left = 322.0
+offset_top = 211.0
+offset_right = 489.0
+offset_bottom = 272.0
+theme = SubResource("Theme_2vqon")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("3_5ggdv")
+theme_override_font_sizes/font_size = 35
+text = "True"
+
+[node name="Label" type="Label" parent="Camera2D/SettingsMenu"]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 160.0
+offset_right = 495.0
+offset_bottom = 202.0
+theme_override_fonts/font = ExtResource("3_5ggdv")
+theme_override_font_sizes/font_size = 37
+text = "Haptics: "
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Camera2D/StartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Camera2D/SettingsButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Camera2D/SettingsMenu/Back" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/SettingsMenu/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Camera2D/SettingsMenu/Haptics" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/SettingsMenu/Haptics" to="." method="_on_haptics_pressed"]
+[connection signal="pressed" from="Camera2D/SettingsMenu/Haptics" to="." method="_on_back_pressed"]

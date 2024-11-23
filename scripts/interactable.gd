@@ -18,6 +18,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	if toggleable and has_overlapping_bodies():
 		interactMess()
 	#if isFirst and not toggleable and has_overlapping_bodies():
@@ -28,31 +29,38 @@ func _process(delta: float) -> void:
 	if interactable:
 		
 		await get_tree().create_timer(0.3).timeout
-		if not toggleable and Input.is_action_pressed("interact"):
-			#print("vibrate")
-			$Sprite2D.set_texture(second_texture)
-			Player.interact()
-			_startvib() #need to move this out of process
-			isFirst = false 
-		if toggleable and Input.is_action_pressed("interact"):
-			
-			#print("vibrate")
-			Player.interact()
-			_startvib()
-			
-			if isFirst:
+		if self.name == "rubber-duck" and Input.is_action_pressed("interact"):
+			Navigation.go("endscreen")
+		else:
+			if not toggleable and Input.is_action_pressed("interact"):
+				#print("vibrate")
+				Tracking.intercount += 1
 				$Sprite2D.set_texture(second_texture)
-				#print("togglefirst")
-				await get_tree().create_timer(0.5).timeout
-				isFirst = false
+				Player.interact()
+				if Tracking.haptics: 
+					_startvib() #need to move this out of process
+				isFirst = false 
 				
-			elif not isFirst:
-				$Sprite2D.set_texture(first_texture)
-				#print("togglesecond")
-				await get_tree().create_timer(0.5).timeout
-				isFirst = true
-		if not Input.is_action_pressed("interact"):
-			Player.normal()
+			if toggleable and Input.is_action_pressed("interact"):
+				Tracking.intercount += 1
+				#print("vibrate")
+				Player.interact()
+				if Tracking.haptics: 
+					_startvib() #need to move this out of process
+				
+				if isFirst:
+					$Sprite2D.set_texture(second_texture)
+					#print("togglefirst")
+					await get_tree().create_timer(0.5).timeout
+					isFirst = false
+					
+				elif not isFirst:
+					$Sprite2D.set_texture(first_texture)
+					#print("togglesecond")
+					await get_tree().create_timer(0.5).timeout
+					isFirst = true
+			if not Input.is_action_pressed("interact"):
+				Player.normal()
 
 		
 func interactMess():

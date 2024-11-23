@@ -1,39 +1,29 @@
 {
-	"Startroom": [
-		6.7554791111111
-	],
-	"Total": [
-		11.5888124444446
-	]
-}
-{
-	"Startroom": [
-		3.83168633333333
-	],
-	"Total": [
-		3.84835299999999
-	]
-}
-{
-	"Startroom": [
-		3.83168633333333
-	],
-	"Total": [
-		3.84835299999999
-	]
-}
-{
-	"Startroom": [
-		34.5794430000003
-	],
-	"Total": [
-		189.992972999945
-	]
-}{
-	"Startroom": [
-		20.4347036666669
-	],
-	"Total": [
-		46.6030183333318
+	"eval": [
+		{
+			"Angsty": 0,
+			"Bathroom 1": 0,
+			"Bathroom 2": 0,
+			"Cutesy": 0,
+			"Games": 0,
+			"Guest Bed": 0,
+			"Hallway 1": 0,
+			"Hallway 2": 0,
+			"Hallway 3": 0,
+			"Hallway 4": 0,
+			"Indoor Garden": 0,
+			"Interactions": 0,
+			"Kitchen": 0,
+			"Laundry": 0,
+			"Library": 0,
+			"Living Room": 0,
+			"Master": 0,
+			"Nursery": 0,
+			"Rooms": "",
+			"Startroom": 0,
+			"Storage": 0,
+			"Study": 0,
+			"Total": 0
+		}
 	]
 }

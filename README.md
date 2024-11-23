@@ -12,6 +12,6 @@ The completed environment will be used for user studies to collect qualitative a
 ## Credit
 To create the simulation, we used a mix of asset packs from shubibubi, Penzilla and ghostpixxells, as well as edited and created assets using Aseprite.
 
-shubibubi: https://shubibubi.itch.io/cozy-interior 
-Penzilla: https://penzilla.itch.io/top-down-retro-interior  
-ghostpixxells: https://ghostpixxells.itch.io/pixelfood  
+- shubibubi: https://shubibubi.itch.io/cozy-interior
+- Penzilla: https://penzilla.itch.io/top-down-retro-interior  
+- ghostpixxells: https://ghostpixxells.itch.io/pixelfood  

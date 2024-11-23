@@ -30,9 +30,7 @@ func _on_settings_button_pressed() -> void:
 func _on_start_button_pressed() -> void:
 	Player.show(); 
 	$"/root/Player/Camera2D".make_current(); 
-	Navigation.go("startroom")
-	Tracking.start() # Replace with function body.
-	Tracking.switch("startroom")
+	Navigation.go("instructions")
 
 
 func _on_haptics_pressed() -> void:

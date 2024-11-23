@@ -1,7 +1,7 @@
 # Examining the Impact of Haptic Juiciness on Illusions of Agency
 ### A project by Arya Sinha, Marium Ahmed and Yuk Yi Wong
 
-Digital interfaces have become increasingly responsive in recent years. From the gentle tap after an Apple Pay transaction to curated feeds on social media platforms, companies are striving to deliver more immersive and personalized experiences to users. 
+Digital interfaces have become increasingly responsive in recent years. From the gentle tap following an Apple Pay transaction to curated feeds on social media platforms, companies are striving to deliver more immersive and personalized experiences to users. 
 
 In descriptive terms, our project observes the impact of haptic feedback on a user’s perception on their actions and decisions in a virtual environment. Haptic juiciness is a term that merges haptics with the concept of ‘game juice’. Game juice refers to the added in-game feedback that brings a greater sense of immersion and satisfaction to the player experience. Combined, haptic juiciness refers to deliberate tactile designs engineered to maximize user engagement with the digital device and/or interface. Meanwhile, the sense of agency refers to when a user feels in control of their actions. With illusions of agency, users falsely attribute digital influences to their own inclinations.
 

@@ -8,6 +8,8 @@ const JUMP_VELOCITY = -400.0
 var messageshow = false
 var messagehide = false
 
+var toggled_on = false
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -33,3 +35,19 @@ func normal():
 	$Sprite2D.set_texture(normText)
 	#Input.start_joy_vibration(0, 0.5, 0.5, 0.1)
 	
+
+
+
+	 # Replace with function body.
+
+
+
+
+func _on_button_pressed() -> void:
+	print(toggled_on)
+	if toggled_on: 
+		$ObjectivePopUp.hide()
+		toggled_on = false; 
+	else: 
+		$ObjectivePopUp.show() 
+		toggled_on = true; # Replace with function body.

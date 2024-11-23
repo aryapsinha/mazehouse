@@ -103,6 +103,8 @@ func go(leveltag):
 			sceneload = hallway4
 		"endscreen":
 			sceneload = endscreen
+		"instructions":
+			sceneload = instructions
 	if sceneload != null:
 		#spawndoortag = spawndoor
 		

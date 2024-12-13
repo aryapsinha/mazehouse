@@ -24,6 +24,32 @@
 			"Storage": 0,
 			"Study": 0,
 			"Total": 0
+		},
+		{
+			"Angsty": 0,
+			"Bathroom 1": 0,
+			"Bathroom 2": 1.2,
+			"Cutesy": 1.88333333333333,
+			"Games": 5.39971266666665,
+			"Guest Bed": 0,
+			"Hallway 1": 12.6826786666666,
+			"Hallway 2": 10.68227,
+			"Hallway 3": 0,
+			"Hallway 4": 0,
+			"Haptics": false,
+			"Indoor Garden": 9.7333333333334,
+			"Interactions": 0,
+			"Kitchen": 7.83333333333332,
+			"Laundry": 2.31666666666666,
+			"Library": 14.5333333333336,
+			"Living Room": 16.8161360000003,
+			"Master": 11.4000000000001,
+			"Nursery": 0,
+			"Rooms": "tt1klk1t1v2y2c2d2eium",
+			"Startroom": 12.3897127777778,
+			"Storage": 0,
+			"Study": 8.16591533333332,
+			"Total": 115.053092111108
 		}
 	]
 }
